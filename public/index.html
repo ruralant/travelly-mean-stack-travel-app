@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="travellyApp">
 <head>
   <title>Travelly</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="//cdn.jsdelivr.net/satellizer/0.13.1/satellizer.min.js"></script>
+  <script src="/js/client.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
-<body>
-<h1>Travelly</h1>
+<body ng-controller="MainController as main">
+
+<!-- login button has to go on the register page. Here just for test -->
+<button ng-click="main.authenticate('facebook')">Sign in with Facebook</button>
+<button ng-click="main.authenticate('twitter')">Sign in with Twitter</button>
+  
 </body>
 </html>
