@@ -5,13 +5,27 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="//cdn.jsdelivr.net/satellizer/0.13.1/satellizer.min.js"></script>
   <script src="/js/client.js"></script>
+  <script src="/js/controllers/main.js"></script>
+  <script src="/js/controllers/login.js"></script>
+  <script src="/js/controllers/register.js"></script>
+  <script src="/js/directives/date.js"></script>
+  <script src="/js/directives/file.js"></script>
+  <script src="/js/services/formData.js"></script>
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body ng-controller="MainController as main">
+  <header>
+    <nav>
+      <a ng-if="!main.currentUser" ui-sref="login">Login</a>
+      <a ng-if="!main.currentUser" ui-sref="register">Register</a>
+      <a href="#" ng-if="main.currentUser" ng-click="main.logout()">Logout</a>
+    </nav>
+  </header>
 
 <!-- login button has to go on the register page. Here just for test -->
 <button ng-click="main.authenticate('facebook')">Sign in with Facebook</button>
 <button ng-click="main.authenticate('twitter')">Sign in with Twitter</button>
-  
+
+  <main ui-view></main> 
 </body>
 </html>

@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var morgan = require('morgan');
 var mongoose = require('mongoose');
+
 var routes = require('./config/routes');
 
 mongoose.Promise = bluebird;

@@ -4,14 +4,19 @@
   "description": "wdi project4",
   "main": "app.js",
   "dependencies": {
+    "aws-sdk": "^2.6.0",
+    "bcrypt": "^0.8.7",
     "bluebird": "^3.4.6",
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "express": "^4.14.0",
     "mongoose": "^4.6.0",
     "morgan": "^1.7.0",
+    "multer": "^1.2.0",
+    "multer-s3": "^2.3.2",
     "request": "^2.74.0",
-    "request-promise": "^4.1.1"
+    "request-promise": "^4.1.1",
+    "uuid": "^2.0.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",

@@ -1,2 +1,12 @@
-<button ng-click="main.authenticate('facebook')">Sign in with Facebook</button>
-<button ng-click="main.authenticate('twitter')">Sign in with Twitter</button>
+<h1>Register</h1>
+
+<form ng-submit="register.submit()">
+  <input type="text" name="username" ng-model="register.user.username">
+  <input type="text" name="email" ng-model="register.user.email">
+  <input type="password" name="password" ng-model="register.user.password">
+  <input type="password" name="passwordConfirmation" ng-model="register.user.passwordConfirmation">
+
+  <button>Register</button>
+</form>
+
+<a ui-sref="login">Already a User? Login Here!</a>
