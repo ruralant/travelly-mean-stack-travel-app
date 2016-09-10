@@ -1,5 +1,5 @@
 angular
-  .module("travellyApp")
+  .module("TravellyApp")
   .controller("LoginController", LoginController);
 
 LoginController.$inject = ["$auth", "$state", "$rootScope"];
@@ -11,7 +11,7 @@ function LoginController($auth, $state, $rootScope) {
     $auth.authenticate(provider)
       .then(function() {
         $rootScope.$broadcast("loggedIn");
-        $state.go('usersIndex');
+        $state.go('usersShow');
       });
   }
 
@@ -20,7 +20,7 @@ function LoginController($auth, $state, $rootScope) {
       url: "/api/login"
     }).then(function(){
       $rootScope.$broadcast("loggedIn");
-      $state.go('usersIndex');
+      $state.go('search');
     })
   }
 }

@@ -72,7 +72,7 @@ function login(req, res) {
       var payload = {
         _id: user._id,
         username: user.username,
-        profilePicture: user.profilePicture
+        avatar: user.profilePicture
       };
 
       var token = jwt.sign(payload, secret, { expiresIn: '24h' });
@@ -80,6 +80,7 @@ function login(req, res) {
       res.status(200).json({ token: token });
     })
     .catch(function(err) {
+      console.log(err);
       res.status(500).json(err);
     });
   }

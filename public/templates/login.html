@@ -1,12 +1,15 @@
 <h1>Login</h1>
 
+<h3>Login with Twitter of Facebook</h3>
+<button ng-click="login.authenticate('facebook')">Sign in with Facebook</button>
+<button ng-click="login.authenticate('twitter')">Sign in with Twitter</button>
+
 <h3>Login with Email</h3>
 
-<button ng-click="main.authenticate('facebook')">Sign in with Facebook</button>
-<button ng-click="main.authenticate('twitter')">Sign in with Twitter</button>
-
 <form ng-submit="login.submit()">
+  Email
   <input type="text" name="email" ng-model="login.credentials.email">
+  Password
   <input type="password" name="password" ng-model="login.credentials.password">
 
   <button>Login</button>

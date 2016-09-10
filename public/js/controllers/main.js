@@ -1,5 +1,5 @@
 angular
-  .module("travellyApp")
+  .module("TravellyApp")
   .controller("MainController", MainController);
 
 MainController.$inject = ["$auth", "$state", "$rootScope"];
@@ -12,7 +12,7 @@ function MainController($auth, $state, $rootScope) {
   this.logout = function() {
     $auth.logout();
     this.currentUser = null;
-    $state.go("usersIndex");
+    $state.go("/");
   }
 
   $rootScope.$on("loggedIn", function() {

@@ -1,6 +1,6 @@
 angular
-  .module('travellyApp')
-  .factory('formData', formData);
+  .module("TravellyApp")
+  .factory("formData", formData);
 
 function formData() {
   return {

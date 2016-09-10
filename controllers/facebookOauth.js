@@ -2,6 +2,7 @@ var User = require('../models/user');
 var request = require('request-promise');
 var jwt = require('jsonwebtoken');
 var secret = require('../config/token').secret
+var qs = require('qs');
 
 function login(req, res) {
   request.post({
@@ -20,6 +21,7 @@ function login(req, res) {
       json: true
     });
   }).then(function(profile) {
+    console.log(profile);
     return User.findOne({ email: profile.email })
       .then(function(user) {
          if(user) {
@@ -28,7 +30,7 @@ function login(req, res) {
          }
          else {
            user = new User({
-             username: profile.login,
+             username: profile.name,
              email: profile.email,
              facebookId: profile.id,
              profilePicture: profile.picture ? profile.picture.data.url : null
@@ -46,6 +48,9 @@ function login(req, res) {
       var token = jwt.sign(payload, secret, { expiresIn: '24h' });
 
       res.status(200).json({ token: token });
+    }).catch(function(err) {
+      console.log(err);
+      return res.status(500).json(err);
     })
 }
 module.exports = {

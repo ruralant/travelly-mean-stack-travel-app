@@ -1,6 +1,6 @@
 angular
-  .module('travellyApp')
-  .directive('date', date);
+  .module("TravellyApp")
+  .directive("date", date);
 
 function date() {
   return {

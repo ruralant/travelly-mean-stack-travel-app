@@ -1,21 +1,19 @@
 angular
-  .module("travellyApp")
-  .controller("MainController", MainController);
+  .module("TravellyApp")
+  .controller("RegisterController", RegisterController);
 
-MainController.$inject = ["$auth", "$state", "$rootScope"];
-function MainController($auth, $state, $rootScope) {
+RegisterController.$inject = ["$auth", "$state"];
+function RegisterController($auth, $state) {
 
-  var self = this;
+  this.user = {};
 
-  this.currentUser = $auth.getPayload();
-
-  this.logout = function() {
-    $auth.logout();
-    this.currentUser = null;
-    $state.go("usersIndex");
+  this.submit = function() {
+    $auth.signup(this.user, {
+      url: '/api/register'
+    })
+    .then(function(){
+      $rootScope.$broadcast("loggedIn");
+      $state.go("usersShow");
+    })
   }
-
-  $rootScope.$on("loggedIn", function() {
-    self.currentUser = $auth.getPayload();
-  });
 }

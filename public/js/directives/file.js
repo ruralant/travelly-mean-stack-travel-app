@@ -1,6 +1,6 @@
 angular
-  .module('travellyApp')
-  .directive('file', file);
+  .module("TravellyApp")
+  .directive("file", file);
 
 function file() {
   return {

@@ -2,13 +2,14 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 
 var userSchema = new mongoose.Schema({
-  username: String,
-  profilePicture: String,
+  username: { type: String, required: true, unique: true },
   email: String,
+  passwordHash: String,
   githubId: Number,
   facebookId: Number,
   twitterId: Number,
-  passwordHash: String
+  profilePicture: String,
+  budget: Number
 });
 
 userSchema.virtual('password')
@@ -28,6 +29,7 @@ userSchema.virtual('passwordConfirmation')
 userSchema.path('passwordHash')
   .validate(function(passwordHash) {
     if(this.isNew) {
+
       if(!this._password) {
         return this.invalidate('password', 'A password is required');
       }
