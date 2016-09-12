@@ -18,4 +18,15 @@ function MainController($auth, $state, $rootScope) {
   $rootScope.$on("loggedIn", function() {
     self.currentUser = $auth.getPayload();
   });
+
+  this.search = function() {
+    SkyScanner.getFlights(this.location, this.departureDate, this.returnDate)
+    .then(function(results){
+      self.quotes = results.Quotes;
+      self.places = results.Places;
+      self.carriers = results.Carriers;
+
+      $state.go("results");
+    });
+  }
 }

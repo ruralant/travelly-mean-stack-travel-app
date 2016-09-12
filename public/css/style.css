@@ -1,6 +1,23 @@
+@import 'https://fonts.googleapis.com/css?family=Hind:300,400,700';
+
+body {
+  /*background-color: #ef6f4c;*/
+  font-family: 'Hind', sans-serif;
+}
+
+nav img {
+  width: 2.5em;
+}
+
 #landingpage {
   text-align: center;
   margin-top: 17%;
+  font-weight: 700;
+}
+
+#landingpage a {
+  font-weight: 100;
+  text-decoration: none;
 }
 
 #login-form {
@@ -38,13 +55,14 @@
   text-align: center;
 }
 
-#locationField {
-  width: 480px;
-}
 #autocomplete {
   top: 0px;
   left: 0px;
   width: 99%;
+}
+
+.navbar {
+  background-color: white;
 }
 
 .card-deck-wrapper {

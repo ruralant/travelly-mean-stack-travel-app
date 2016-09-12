@@ -4,6 +4,7 @@ var facebookController = require('../controllers/facebookOauth');
 var twitterController = require('../controllers/twitterOauth');
 var authController = require('../controllers/auth');
 var usersController = require('../controllers/users');
+var flightsController = require('../controllers/flights');
 
 var jwt = require('jsonwebtoken');
 var secret = require('./token').secret;
@@ -20,6 +21,8 @@ function secureRoute(req, res, next) {
     next();
   });
 }
+
+router.get('/flights', flightsController.flights);
 
 router.route('/users')
   .all(secureRoute)

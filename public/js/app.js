@@ -34,7 +34,7 @@ function Router($stateProvider, $urlRouterProvider) {
     .state('search', {
       url: '/search',
       templateUrl: '/templates/search.html',
-      controller: "RegisterController as search"
+      controller: "SearchController as search"
     })
     .state('userProfile', {
       url: '/user/profile',
@@ -47,13 +47,6 @@ function Router($stateProvider, $urlRouterProvider) {
     });
 
   $urlRouterProvider.otherwise("/landing-page"); 
-}
-
-// Google Maps Autocomplete
-function initAutocomplete() {
-  autocomplete = new google.maps.places.Autocomplete(
-    (document.getElementById('autocomplete')),
-    {types: ['geocode']});
 }
 
 // Google Maps Browser Geolocation

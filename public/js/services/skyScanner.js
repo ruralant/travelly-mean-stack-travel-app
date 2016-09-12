@@ -1,6 +1,6 @@
 angular
   .module("TravellyApp")
-  .service("SkyScanner");
+  .service("SkyScanner", SkyScanner);
 
 // SkyScanner API GET request
 SkyScanner.$inject = ["$http"];
@@ -9,13 +9,14 @@ function SkyScanner($http) {
     return $http({
       method: "GET",
       data: {
-        apiKey: "an248568374537872172131260545280"
+        location: location,
+        departureDate: departureDate,
+        returnDate: returnDate
       },
-      url: "http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/GB/GBP/en-GB/" + location + "/anywhere/" + departureDate + "/" + returnDate;
+      url: "/api/flights"
     })
     .then(function(res) {
       return res.data;
-    });
-    console.log(res.data);
+    })
   }
 }

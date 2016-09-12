@@ -1,108 +1,32 @@
 <div id="search-page">
-  Budget:
-  <br>
-  <form>
-    <input type="number" ng-model="register.user.budget">
+  <form ng-submit="main.search()">
+    <div class="form-group">
+      <label>Budget</label>
+      <input type="number" ng-model="search.budget" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Your Location</label>
+      <input places id="autocomplete" placeholder="Enter your address" type="text" ng-model="search.location" class="form-control">
+    </div>
+    <div class="form-group"> 
+      <label>When you want to travel?</label>
+      <label>From</label>
+      <input type="date" value="departureDate" ng-model="search.departureDate" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>To:</label>
+      <input type="date" value="returnDate" ng-model="search.returnDate" class="form-control">
+    </div>
+
+    <div class="row">
+      <div class="card col-md-3" ng-repeat="theme in search.themes" ng-click="search.selectTheme(theme)">
+        <img class="card-img-top" ng-src="{{ theme.image }}" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">{{ theme.name }}</h4>
+        </div>
+      </div>
+    </div>
+    <br>
+    <button>SEARCH</button>
   </form>
-  <br>
-  Your Location:
-  <br>
-  <div id="locationField" class="m-x-auto">
-    <input id="autocomplete" placeholder="Enter your address" onFocus="initAutocomplete()" type="text"></input>
-  </div>
-  <br>
-  When you want to travel?
-  <div id="travel-dates">
-    From:
-    <input type="date" value="departureDate">
-    To:
-    <input type="date" value="returnDate">
-  </div>
-  <br>
-  <div class="card-deck-wrapper m-x-auto">
-    <div class="card-deck">
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Beach</h4>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Historic</h4>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Mountains</h4>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Romantic</h4>
-        </div>
-      </div>
-    </div>
-    <div class="card-deck">
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Outdoor</h4>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Outdoor</h4>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Skiing</h4>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Theme Park</h4>
-        </div>
-      </div>
-    </div>
-    <div class="card-deck">
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Shopping</h4>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Natural Parks</h4>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Disney</h4>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Carribean</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br>
-  <a ui-sref="results">SEARCH</a>
 </div>
-
-
-
-<!-- <button onFocus="getFlights()">SkyScanner</button> -->
