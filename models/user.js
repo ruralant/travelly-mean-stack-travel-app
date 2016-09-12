@@ -9,7 +9,10 @@ var userSchema = new mongoose.Schema({
   facebookId: Number,
   twitterId: Number,
   profilePicture: String,
-  budget: Number
+  location: String,
+  budget: Number,
+  departureDate: Date,
+  returnDate: Date,
 });
 
 userSchema.virtual('password')

@@ -39,7 +39,7 @@ function Router($stateProvider, $urlRouterProvider) {
     .state('userProfile', {
       url: '/user/profile',
       templateUrl: '/templates/users/show.html',
-      controller: "UserProfileController as userProfile"
+      controller: "UserController as user"
     })
     .state('landingPage', {
       url: '/landing-page',
@@ -56,7 +56,7 @@ function initAutocomplete() {
     {types: ['geocode']});
 }
 
-// Google Maps Autolocate
+// Google Maps Browser Geolocation
 function geolocate() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
