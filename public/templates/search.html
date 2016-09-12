@@ -1,5 +1,13 @@
-<h1>Search Page</h1>
-
-<form>
-  <input type="text" name="300" ng-model="register.user.username">
-</form>
+<div id="search-page">
+  Budget:
+  <br>
+  <form>
+    <input type="number" ng-model="register.user.budget">
+  </form>
+  <br>
+  Your Location:
+  <br>
+  <div id="locationField" class="m-x-auto">
+    <input id="autocomplete" placeholder="Enter your address" onFocus="initAutocomplete()" type="text"></input>
+  </div>
+</div>

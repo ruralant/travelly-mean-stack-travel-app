@@ -4,6 +4,7 @@ angular
   .config(oAuthConfig)
   .config(Router)
 
+// Auth Social API Keys
 oAuthConfig.$inject = ["$authProvider"];
 function oAuthConfig($authProvider) {
   $authProvider.facebook({
@@ -16,6 +17,7 @@ function oAuthConfig($authProvider) {
   });
 }
 
+// Rooting 
 Router.$inject = ["$stateProvider", "$urlRouterProvider"];
 function Router($stateProvider, $urlRouterProvider) {
   $stateProvider 
@@ -28,7 +30,44 @@ function Router($stateProvider, $urlRouterProvider) {
       url: '/register',
       templateUrl: '/templates/register.html',
       controller: "RegisterController as register"
+    })
+    .state('search', {
+      url: '/search',
+      templateUrl: '/templates/search.html',
+      controller: "RegisterController as search"
+    })
+    .state('userProfile', {
+      url: '/user/profile',
+      templateUrl: '/templates/users/show.html',
+      controller: "UserProfileController as userProfile"
+    })
+    .state('landingPage', {
+      url: '/landing-page',
+      templateUrl: '/templates/landing.html',
     });
 
-  $urlRouterProvider.otherwise("/login"); 
+  $urlRouterProvider.otherwise("/landing-page"); 
+}
+
+// Google Maps Autocomplete
+function initAutocomplete() {
+  autocomplete = new google.maps.places.Autocomplete(
+    (document.getElementById('autocomplete')),
+    {types: ['geocode']});
+}
+
+// Google Maps Autolocate
+function geolocate() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var geolocation = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      var circle = new google.maps.Circle({
+        center: geolocation,
+        radius: position.coords.accuracy
+      });
+    });
+  }
 }
