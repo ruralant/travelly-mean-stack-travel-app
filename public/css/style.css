@@ -1,0 +1,19 @@
+#login-form {
+  text-align: center;
+}
+
+#login-form h5 {
+  margin: 3% 0;
+}
+
+#title {
+  margin-top: 10%;
+}
+
+#login-buttons {
+  margin-top: 5%;
+}
+
+#login-forms {
+  width: 60%;
+}

@@ -18,15 +18,34 @@
   <script src="/js/directives/file.js"></script>
   <script src="/js/services/formData.js"></script>
 
+  <script type="text/javascript" href="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body ng-controller="MainController as main">
   <header>
-    <nav>
-      <a ng-if="!main.currentUser" ui-sref="login">Login</a>
-      <a ng-if="!main.currentUser" ui-sref="register">Register</a>
-      <a href="#" ng-if="main.currentUser" ng-click="main.logout()">Logout</a>
+
+    <nav class="navbar navbar-light bg-faded">
+      <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+      <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+        <a class="navbar-brand" href="#">Travelly</a>
+        <ul class="nav navbar-nav pull-xs-right">
+          <li class="nav-item active">
+            <a class="nav-link" ng-if="!main.currentUser" ui-sref="login">Login <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ng-if="!main.currentUser" ui-sref="register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ng-if="main.currentUser" ng-click="main.logout()">Logout </a>
+          </li>
+        </ul>
+      </div>
     </nav>
+
   </header>
 
   <main ui-view></main> 

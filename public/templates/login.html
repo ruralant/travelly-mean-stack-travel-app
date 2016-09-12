@@ -1,18 +1,20 @@
-<h1>Login</h1>
+<div id="login-form">
+  <h1 id="title">Travelly</h1>
 
-<h3>Login with Twitter of Facebook</h3>
-<button ng-click="login.authenticate('facebook')">Sign in with Facebook</button>
-<button ng-click="login.authenticate('twitter')">Sign in with Twitter</button>
+  <div id="login-buttons">
+    <button class="btn btn-primary" ng-click="login.authenticate('facebook')">Sign in with Facebook</button>
+    <button class="btn btn-info" ng-click="login.authenticate('twitter')">Sign in with Twitter</button>
+  </div>
 
-<h3>Login with Email</h3>
+  <h5>or</h5>
 
-<form ng-submit="login.submit()">
-  Email
-  <input type="text" name="email" ng-model="login.credentials.email">
-  Password
-  <input type="password" name="password" ng-model="login.credentials.password">
-
-  <button>Login</button>
-</form>
-
-<a ui-sref="register">Not a user yet? Register Here</a>
+  <div id="login-forms" class="form-group m-x-auto"" ng-submit="login.submit()">
+    <input class="form-control" type="text" name="email" ng-model="login.credentials.email" placeholder="Email">
+    <br>
+    <input class="form-control" type="password" name="password" ng-model="login.credentials.password" placeholder="Password">
+    <br>
+    <input type="submit" value="Submit">
+  </div>
+  <br>
+  <a ui-sref="register">Not a user yet? Register Here</a>
+</div>
