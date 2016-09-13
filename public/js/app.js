@@ -36,6 +36,10 @@ function Router($stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/search.html',
       controller: "SearchController as search"
     })
+    .state('results', {
+      url: '/results',
+      templateUrl: '/templates/results.html',
+    })
     .state('userProfile', {
       url: '/user/profile',
       templateUrl: '/templates/users/show.html',

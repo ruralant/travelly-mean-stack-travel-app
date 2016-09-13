@@ -2,7 +2,6 @@ angular
   .module("TravellyApp")
   .service("Flights", Flights);
 
-// SkyScanner API GET request
 Flights.$inject = ["$http"];
 function Flights($http) {
   this.query = function(location, departureDate, returnDate) {

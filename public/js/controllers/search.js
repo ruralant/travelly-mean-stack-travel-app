@@ -117,6 +117,3 @@ function SearchController() {
     IataCode: "Sen" 
   }]
 };
-
-
-

@@ -7,7 +7,7 @@
     <div class="form-group m-x-auto">
       <label>Your Location</label>
       <select ng-model="search.location" class="form-control">
-        <option ng-repeat="airport in search.airports">{{ airport.name }}</option>
+        <option ng-repeat="airport in search.airports | orderBy:'name'">{{ airport.name }}</option>
       </select>
     </div>
     <div class="form-group m-x-auto"> 
