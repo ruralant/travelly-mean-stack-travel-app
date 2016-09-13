@@ -2,8 +2,8 @@ angular
   .module("TravellyApp")
   .controller("MainController", MainController);
 
-MainController.$inject = ["$auth", "$state", "$rootScope"];
-function MainController($auth, $state, $rootScope) {
+MainController.$inject = ["$auth", "$state", "$rootScope", "Flights"];
+function MainController($auth, $state, $rootScope, Flights) {
 
   var self = this;
 
@@ -20,12 +20,9 @@ function MainController($auth, $state, $rootScope) {
   });
 
   this.search = function() {
-    SkyScanner.getFlights(this.location, this.departureDate, this.returnDate)
+    Flights.query(this.location, this.departure, this.return, this.budget)
     .then(function(results){
-      self.quotes = results.Quotes;
-      self.places = results.Places;
-      self.carriers = results.Carriers;
-
+      self.results = results;
       $state.go("results");
     });
   }

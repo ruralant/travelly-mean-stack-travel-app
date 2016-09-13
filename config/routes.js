@@ -22,7 +22,7 @@ function secureRoute(req, res, next) {
   });
 }
 
-router.get('/flights', flightsController.flights);
+router.get('/flights', flightsController.index);
 
 router.route('/users')
   .all(secureRoute)

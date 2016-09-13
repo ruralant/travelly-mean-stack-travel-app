@@ -1,21 +1,23 @@
 <div id="search-page">
   <form ng-submit="main.search()">
-    <div class="form-group">
+    <div class="form-group m-x-auto">
       <label>Budget</label>
       <input type="number" ng-model="search.budget" class="form-control">
     </div>
-    <div class="form-group">
+    <div class="form-group m-x-auto">
       <label>Your Location</label>
-      <input places id="autocomplete" placeholder="Enter your address" type="text" ng-model="search.location" class="form-control">
+      <select ng-model="search.location" class="form-control">
+        <option ng-repeat="airport in search.airports">{{ airport.name }}</option>
+      </select>
     </div>
-    <div class="form-group"> 
+    <div class="form-group m-x-auto"> 
       <label>When you want to travel?</label>
       <label>From</label>
-      <input type="date" value="departureDate" ng-model="search.departureDate" class="form-control">
+      <input type="date" value="departure" ng-model="search.departure" class="form-control">
     </div>
-    <div class="form-group">
+    <div class="form-group m-x-auto">
       <label>To:</label>
-      <input type="date" value="returnDate" ng-model="search.returnDate" class="form-control">
+      <input type="date" value="return" ng-model="search.return" class="form-control">
     </div>
 
     <div class="row">

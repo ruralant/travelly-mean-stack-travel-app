@@ -2,7 +2,7 @@ var request = require('request-promise');
 var base64 = require('base-64');
 var _ = require('underscore');
 
-function flights(req, res) {
+function index(req, res) {
   // requesting the Sabre token. Base64 is converting a string in a base64 encoded. Required by Sabre for getting the access to the token.
   request.post({
     url: "https://api.test.sabre.com/v2/auth/token",
@@ -30,7 +30,7 @@ function flights(req, res) {
     });
 
     return request.get({
-      url: "http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/GB/GBP/en-GB/LHR/anywhere/" + req.query.departure + "/" + req.query.return,
+      url: "http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/GB/GBP/en-GB/" + req.query.location + "/anywhere/" + req.query.departure + "/" + req.query.return,
       qs: { apiKey: process.env.SKYSCANNER_API_KEY },
       json: true
     })
@@ -80,5 +80,5 @@ function flights(req, res) {
 }
 
 module.exports = {
-  flights: flights
+  index: index
 }
