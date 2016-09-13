@@ -11,8 +11,8 @@ var userSchema = new mongoose.Schema({
   profilePicture: String,
   location: String,
   budget: Number,
-  departure: Date,
-  return: Date,
+  departureDate: Date,
+  returnDate: Date,
 });
 
 userSchema.virtual('password')

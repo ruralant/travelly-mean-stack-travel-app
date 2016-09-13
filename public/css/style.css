@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Hind:300,400,700';
+@import 'https://fonts.googleapis.com/css?family=Pacifico';
 
 body {
   /*background-color: #ef6f4c;*/
@@ -9,27 +10,37 @@ nav img {
   width: 2.5em;
 }
 
-#landingpage {
+#register-page, #landing-page, #login-page, #search-page {
   text-align: center;
-  margin-top: 17%;
+}
+
+#search-page {
+  width: 80%;
+}
+
+#landing-page {
+  margin-top: 10%;
   font-weight: 700;
 }
 
-#landingpage a {
-  font-weight: 100;
-  text-decoration: none;
+#landing-page a {
+  color: #ef6f4c;
+  font-weight: 700;
+  margin-top: 3%;
 }
 
-#login-form {
-  text-align: center;
+#landing-page h1 {
+  font-family: 'Pacifico', cursive;
+  color: #ef6f4c;
+  font-size: 5em;
 }
 
-#login-form h5 {
+#login-page h5 {
   margin: 3% 0;
 }
 
 #title {
-  margin-top: 12%;
+  margin-top: 8%;
 }
 
 #login-buttons {
@@ -50,17 +61,6 @@ nav img {
   height: 100%;
 }
 
-#search-page {
-  margin: 12% 10% 5% 10%;
-  text-align: center;
-}
-
-#autocomplete {
-  top: 0px;
-  left: 0px;
-  width: 99%;
-}
-
 .navbar {
   background-color: white;
 }
@@ -69,6 +69,10 @@ nav img {
   width: 70%;
 }
 .form-group {
-  width: 60%;
+  width: 50%;
   margin-bottom: 3%;
+}
+
+.search-form {
+  margin: 5% 0;
 }

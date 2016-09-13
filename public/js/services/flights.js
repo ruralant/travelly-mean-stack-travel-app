@@ -4,18 +4,34 @@ angular
 
 Flights.$inject = ["$http"];
 function Flights($http) {
-  this.query = function(location, departureDate, returnDate) {
+
+  function padNum(num) {
+    if(num < 10) return "0" + num;
+    return num;
+  }
+
+  function formatDate(date) {
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+
+    return year + "-" + padNum(month) + "-" + padNum(day);
+  }
+
+  this.query = function(budget, location, departureDate, returnDate, theme) {
     return $http({
       method: "GET",
-      data: {
+      params: {
+        budget: budget,
         location: location,
-        departureDate: departureDate,
-        returnDate: returnDate
+        departureDate: formatDate(departureDate),
+        returnDate: formatDate(returnDate),
+        theme: theme
       },
       url: "/api/flights"
     })
     .then(function(res) {
       return res.data;
-    })
+    });
   }
 }

@@ -1,16 +1,30 @@
-<h1>Register</h1>
+<div id="register-page">
 
-<form ng-submit="register.submit()">
-  Username
-  <input type="text" name="username" ng-model="register.user.username">
-  Email
-  <input type="text" name="email" ng-model="register.user.email">
-  Passoword
-  <input type="password" name="password" ng-model="register.user.password">
-  Password Confirmation
-  <input type="password" name="passwordConfirmation" ng-model="register.user.passwordConfirmation">
+  <form ng-submit="register.submit()">
 
-  <input type="submit" value="Register">
-</form>
+    <div class="form-group m-x-auto">
+      <label>Username</label>
+      <input type="text" name="username" ng-model="register.user.username" class="form-control">
+    </div>
 
-<a ui-sref="login">Already a User? Login Here!</a>
+    <div class="form-group m-x-auto">
+      <label>Email</label>
+      <input type="email" name="email" ng-model="register.user.email" class="form-control">
+    </div>
+
+    <div class="form-group m-x-auto">
+      <label>Password</label>
+      <input type="password" name="password" ng-model="register.user.password" class="form-control">
+    </div>
+
+    <div class="form-group m-x-auto">
+      <label>Password Confirmation</label>
+      <input type="password" name="passwordConfirmation" ng-model="register.user.passwordConfirmation" class="form-control">
+    </div>
+
+    <input type="submit" value="Register">
+
+  </form>
+
+  <a ui-sref="login">Already a User? Login Here!</a>
+</div>

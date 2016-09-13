@@ -1,8 +1,11 @@
-<div class="card-group">
-  <div class="card col-md-3" ng-repeat="results in main.search" ng-click="">
+<div class="row">
+  <div class="card col-md-4" ng-repeat="result in main.searchResults">
     <!-- <img class="card-img-top" ng-src="{{ }}" alt="Card image cap"> -->
     <div class="card-block">
-      <h4 class="card-title">{{ theme.name }}</h4>
+      <h4 class="card-title">{{ result.OutboundLeg.Destination.CityName }}</h4>
+      <h3>{{ Carriers.Name }}</h3>
+      <h2>£ {{ result.MinPrice }}</h2>
     </div>
   </div>
+  
 </div>

@@ -30,7 +30,7 @@ function index(req, res) {
     });
 
     return request.get({
-      url: "http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/GB/GBP/en-GB/" + req.query.location + "/anywhere/" + req.query.departure + "/" + req.query.return,
+      url: "http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/GB/GBP/en-GB/LHR/anywhere/" + req.query.departureDate + "/" + req.query.returnDate,
       qs: { apiKey: process.env.SKYSCANNER_API_KEY },
       json: true
     })
@@ -38,7 +38,7 @@ function index(req, res) {
       var quotes = response.Quotes;
       var places = response.Places;
       var carriers = response.Carriers;
-      //mapping the OutboungLeg flights for quotes, places and carriers and using underscore for...
+
       quotes = quotes.map(function(quote) {
         quote.OutboundLeg.Carriers = quote.OutboundLeg.CarrierIds.map(function(carrierId) {
           return _.findWhere(carriers, { CarrierId: carrierId });
@@ -55,7 +55,7 @@ function index(req, res) {
         quote.InboundLeg.Origin = _.findWhere(places, { PlaceId: quote.InboundLeg.OriginId });
 
         quote.InboundLeg.Destination = _.findWhere(places, { PlaceId: quote.InboundLeg.DestinationId });
-        // delitin unneccesary informations
+        // deleting unneccesary informations
         delete quote.OutboundLeg.CarrierIds;
         delete quote.OutboundLeg.OriginId;
         delete quote.OutboundLeg.DestinationId;
@@ -67,15 +67,14 @@ function index(req, res) {
         return quote;
         // return the locations converting them in IataCode.
       }).filter(function(quote) {
-        return destinations.indexOf(quote.OutboundLeg.Destination.IataCode) !== -1 &&
-        // getting the minimun price and store it as budget.
-        quote.MinPrice <= req.query.budget;
+        return destinations.indexOf(quote.OutboundLeg.Destination.IataCode) !== -1 && quote.MinPrice <= req.query.budget;
       });
       res.status(200).json(quotes);
     });
   })
   .catch(function(err) {
-    res.send(500);
+    console.log(err);
+    res.sendStatus(500);
   });
 }
 

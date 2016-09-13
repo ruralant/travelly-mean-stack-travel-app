@@ -2,12 +2,13 @@ angular
   .module("TravellyApp")
   .controller("SearchController", SearchController);
 
-SearchController.$inject = [];
-function SearchController() {
+SearchController.$inject = ["Flights", "$http", "$rootScope", "$state"];
+function SearchController(Flights, $http, $rootScope, $state) {
   this.budget = null;
   this.location = null;
   this.departureDate = null;
   this.returnDate = null;
+  this.theme = null;
 
   this.selectTheme = function(theme) {
     this.theme = theme.name;
@@ -46,74 +47,82 @@ function SearchController() {
   },{
     name: "Carribean",
     image: ""
+  },{
+    name: "Gambling",
+    image: ""
   }];
-
-  this.selectLocation = function(airport) {
-    this.airport = airport.name;
-  }
 
   this.airports = [{
     name:"London Heathrow",
-    IataCode: "LHR" 
+    iataCode: "LHR" 
   },{
     name:"London Gatwick",
-    IataCode: "LGW" 
+    iataCode: "LGW" 
   },{
     name:"Manchester",
-    IataCode: "MAN" 
+    iataCode: "MAN" 
   },{
     name:"London Stansted",
-    IataCode: "STN" 
+    iataCode: "STN" 
   },{
     name:"London Luton",
-    IataCode: "LTN" 
+    iataCode: "LTN" 
   },{
     name:"Edimburgh",
-    IataCode: "EDI" 
+    iataCode: "EDI" 
   },{
     name:"Birmingham",
-    IataCode: "BHX" 
+    iataCode: "BHX" 
   },{
     name:"Glasgow",
-    IataCode: "GLA" 
+    iataCode: "GLA" 
   },{
     name:"Bristol",
-    IataCode: "BRS" 
+    iataCode: "BRS" 
   },{
     name:"Newcastle",
-    IataCode: "NCL" 
+    iataCode: "NCL" 
   },{
     name:"East Midlands",
-    IataCode: "EMA" 
+    iataCode: "EMA" 
   },{
     name:"Belfast International",
-    IataCode: "BFS" 
+    iataCode: "BFS" 
   },{
     name:"London City",
-    IataCode: "LCY" 
+    iataCode: "LCY" 
   },{
     name:"Liverpool",
-    IataCode: "LPL" 
+    iataCode: "LPL" 
   },{
     name:"Aberdeen",
-    IataCode: "ABZ" 
+    iataCode: "ABZ" 
   },{
     name:"Leeds Bradford",
-    IataCode: "LBA" 
+    iataCode: "LBA" 
   },{
     name:"Belfast City",
-    IataCode: "BHD" 
+    iataCode: "BHD" 
   },{
     name:"Southampton",
-    IataCode: "SOU" 
+    iataCode: "SOU" 
   },{
     name:"Jersey",
-    IataCode: "JER" 
+    iataCode: "JER" 
   },{
-    name:"Cardif",
-    IataCode: "CWL" 
+    name:"Cardiff",
+    iataCode: "CWL" 
   },{
     name:"London Southend Airport",
-    IataCode: "Sen" 
-  }]
+    iataCode: "SEN" 
+  }];
+
+  this.search = function() {
+    Flights.query(this.budget, this.location, this.departureDate, this.returnDate, this.theme)
+    .then(function(results){
+      console.log(results);
+      $rootScope.$broadcast("searchResults", results);
+      $state.go("results");
+    });
+  }
 };

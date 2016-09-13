@@ -39,6 +39,7 @@ function Router($stateProvider, $urlRouterProvider) {
     .state('results', {
       url: '/results',
       templateUrl: '/templates/results.html',
+
     })
     .state('userProfile', {
       url: '/user/profile',
@@ -53,18 +54,3 @@ function Router($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/landing-page"); 
 }
 
-// Google Maps Browser Geolocation
-function geolocate() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var geolocation = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-      var circle = new google.maps.Circle({
-        center: geolocation,
-        radius: position.coords.accuracy
-      });
-    });
-  }
-}

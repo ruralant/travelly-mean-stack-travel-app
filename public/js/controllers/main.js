@@ -2,8 +2,8 @@ angular
   .module("TravellyApp")
   .controller("MainController", MainController);
 
-MainController.$inject = ["$auth", "$state", "$rootScope", "Flights"];
-function MainController($auth, $state, $rootScope, Flights) {
+MainController.$inject = ["$auth", "$state", "$rootScope"];
+function MainController($auth, $state, $rootScope) {
 
   var self = this;
 
@@ -19,11 +19,7 @@ function MainController($auth, $state, $rootScope, Flights) {
     self.currentUser = $auth.getPayload();
   });
 
-  this.search = function() {
-    Flights.query(this.location, this.departure, this.return, this.budget)
-    .then(function(results){
-      self.results = results;
-      $state.go("results");
-    });
-  }
+  $rootScope.$on("searchResults", function(e, data) {
+    self.searchResults = data;
+  });
 }
