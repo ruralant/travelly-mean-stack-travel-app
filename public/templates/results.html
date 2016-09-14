@@ -1,15 +1,17 @@
-<div class="row">
-  <div class="card col-md-4" ng-repeat="result in main.searchResults">
-    <!-- <img class="card-img-top" ng-src="{{ }}" alt="Card image cap"> -->
-    <div class="card-block">
-      <h4 class="card-title">{{ result.OutboundLeg.Destination.CityName }}</h4>
-      <h3>{{ Carriers.Name }}</h3>
-      <h2>£ {{ result.MinPrice }}</h2>
-    </div>
-  </div> 
-</div>
+<div id="result-page">
+  <div class="row">
+    <div class="card col-md-4" ng-repeat="result in main.searchResults">
+      <!-- <img class="card-img-top" ng-src="{{ }}" alt="Card image cap"> -->
+      <div class="card-block">
+        <h3 class="card-title">{{ result.OutboundLeg.Destination.CityName }}</h4>
+        <h3>{{ Carriers.Name }}</h3>
+        <h4>£ {{ result.MinPrice }}</h5>
+      </div>
+    </div> 
+  </div>
 
-<div ng-if="!main.currentUser">
-  <h3>Register for seeing more results!</h3>
-  <a ui-sref="register">Register Here</a>
+  <div ng-if="!main.currentUser">
+    <h3>Register for seeing more results!</h3>
+    <a ui-sref="register">Register Here</a>
+  </div>
 </div>

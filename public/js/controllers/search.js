@@ -37,7 +37,7 @@ function SearchController(Flights, $http, $rootScope, $state) {
     image: "/images/themepark.jpg"
   },{
     name: "Shopping",
-    image: "/images/shopping.jpg"
+    image: "/images/shopping.png"
   },{
     name: "Natural Parks",
     image: "/images/naturalpark.jpg"

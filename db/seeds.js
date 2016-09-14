@@ -13,19 +13,22 @@ User.create([
     email: "ed@ed",
     profilePicture: "...",
     password: "password",
-    passwordConfirmation: "password" 
+    passwordConfirmation: "password",
+    location: "London Heathrow" 
   },{
     username: "Adriana",
     email: "adri@adri",
     profilePicture: "...",
     password: "password",
-    passwordConfirmation: "password" 
+    passwordConfirmation: "password",
+    location: "London Luton" 
   },{
     username: "Marta",
     email: "marta@marta",
     profilePicture: "...",
     password: "password",
-    passwordConfirmation: "password"
+    passwordConfirmation: "password",
+    location: "London Stansted"
   }
 ], function(err, users) {
   console.log(users);

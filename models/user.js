@@ -13,6 +13,7 @@ var userSchema = new mongoose.Schema({
   budget: Number,
   departureDate: Date,
   returnDate: Date,
+  destinations: []
 });
 
 userSchema.virtual('password')
