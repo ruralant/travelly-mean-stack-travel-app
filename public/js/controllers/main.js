@@ -16,13 +16,13 @@ function MainController($auth, $state, $rootScope, User) {
     $state.go("/");
   }
 
-  this.storeFlights = function() {
+  this.storeUserSearch = function() {
     User.update({ id: this.currentUser._id },
-                { destinations: this.searchResults},
-                function(res) {
-                  self.currentUser = res;
-                  console.log(self.currentUser);
-                });
+      { searchParams: this.searchResults.OutboundLeg.Destination.PlaceId},
+      function(res) {
+        self.currentUser = res;
+        console.log("Current User: ", self.currentUser);
+      });
   };
 
   $rootScope.$on("loggedIn", function() {
@@ -32,6 +32,6 @@ function MainController($auth, $state, $rootScope, User) {
   $rootScope.$on("searchResults", function(e, data) {
     self.searchResults = data;
     console.log("Here are all the flights to save.. ", data);
-    self.storeFlights();
+    self.storeUserSearch();
   });
 }

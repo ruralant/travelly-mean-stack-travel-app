@@ -4,7 +4,7 @@
       <!-- <img class="card-img-top" ng-src="{{ }}" alt="Card image cap"> -->
       <div class="card-block">
         <h3 class="card-title">{{ result.OutboundLeg.Destination.CityName }}</h4>
-        <h3>{{ Carriers.Name }}</h3>
+        <h3>{{ result.OutboundLeg.Carriers.Name }}</h3>
         <h4>£ {{ result.MinPrice }}</h5>
       </div>
     </div> 

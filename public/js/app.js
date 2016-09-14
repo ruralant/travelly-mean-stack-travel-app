@@ -63,4 +63,3 @@ function Router($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise("/landing-page"); 
 }
-

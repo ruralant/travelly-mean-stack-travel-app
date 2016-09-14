@@ -2,7 +2,8 @@
 @import 'https://fonts.googleapis.com/css?family=Pacifico';
 
 body {
-  background-color: #edefed;
+  background-image: url("/images/TravellyBackground.jpg");
+  background-size: cover;
   font-family: 'Hind', sans-serif;
 }
 
@@ -39,7 +40,7 @@ nav ul {
 }
 
 #landing-page {
-  margin-top: 10%;
+  margin-top: 9%;
   font-weight: 700;
 }
 
@@ -66,17 +67,11 @@ nav ul {
   border-color: #ef6f4c;
 }
 
-#register-page a, #register-page input {
-  color: #ef6f4c;
-  font-weight: 700;
-  margin-top: 3%;
-  border-color: #ef6f4c;
-}
-
 #landing-page h1 {
   font-family: 'Pacifico', cursive;
   color: #ef6f4c;
   font-size: 5em;
+  margin: 2rem 0 3rem 0;
 }
 
 #login-page h1 {
@@ -173,13 +168,3 @@ font-weight: 300;
   background-color: #ef6f4c;
   color: #edefed;
 }
-
-/*#bgvideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}*/
