@@ -16,40 +16,40 @@ function SearchController(Flights, $http, $rootScope, $state) {
 
   this.themes = [{
     name: "Beach",
-    image: ""
+    image: "/images/beach.jpg"
   },{
     name: "Historic",
-    image: ""
+    image: "/images/historic.jpg"
   },{
     name: "Mountains",
-    image: ""
+    image: "/images/mountains.jpg"
   },{
     name: "Romantic",
-    image: ""
+    image: "/images/romantic.jpg"
   },{
     name: "Outdoors",
-    image: ""
+    image: "/images/outdoors.jpg"
   },{
     name: "Skiing",
-    image: ""
+    image: "/images/skiing.jpg"
   },{
     name: "Theme Park",
-    image: ""
+    image: "/images/themepark.jpg"
   },{
     name: "Shopping",
-    image: ""
+    image: "/images/shopping.jpg"
   },{
     name: "Natural Parks",
-    image: ""
+    image: "/images/naturalpark.jpg"
   },{
     name: "Disney",
-    image: ""
+    image: "/images/disney.jpg"
   },{
     name: "Carribean",
-    image: ""
+    image: "/images/carribean.jpg"
   },{
     name: "Gambling",
-    image: ""
+    image: "/images/gambling.jpg"
   }];
 
   this.airports = [{

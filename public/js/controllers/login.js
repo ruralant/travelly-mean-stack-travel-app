@@ -11,7 +11,7 @@ function LoginController($auth, $state, $rootScope) {
     $auth.authenticate(provider)
       .then(function() {
         $rootScope.$broadcast("loggedIn");
-        $state.go('userProfile');
+        $state.go('search');
       });
   }
 

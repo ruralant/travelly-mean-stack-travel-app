@@ -2,7 +2,7 @@
 @import 'https://fonts.googleapis.com/css?family=Pacifico';
 
 body {
-  /*background-color: #ef6f4c;*/
+  background-color: #edefed;
   font-family: 'Hind', sans-serif;
 }
 
@@ -62,7 +62,7 @@ nav img {
 }
 
 .navbar {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .card-deck-wrapper {
@@ -75,4 +75,16 @@ nav img {
 
 .search-form {
   margin: 5% 0;
+}
+
+.card-img-top{
+  width:100%;
+  height:auto;
+  margin: 0;
+}
+
+.card{
+  height: 250px;
+  padding-right: 0;
+  padding-left: 0;
 }

@@ -16,6 +16,8 @@
   <script src="/js/controllers/login.js"></script>
   <script src="/js/controllers/register.js"></script>
   <script src="/js/controllers/search.js"></script>
+  <script src="/js/controllers/users/usersIndex.js"></script>
+  <script src="/js/models/user.js"></script>
   <script src="/js/directives/date.js"></script>
   <script src="/js/directives/file.js"></script>
   <script src="/js/directives/places.js"></script>
@@ -40,7 +42,7 @@
       <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
         <!-- <a class="navbar-brand" href="#">Travelly</a> -->
         <a ui-sref="search">
-          <img src="/images/travelly.jpg">
+          <img src="/images/travelly.png">
         </a>
         <ul class="nav navbar-nav pull-xs-right">
           <li class="nav-item active">
@@ -48,6 +50,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" ng-if="!main.currentUser" ui-sref="register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ng-if="main.currentUser" ng-click="userShow">Your Profile </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" ng-if="main.currentUser" ng-click="main.logout()">Logout </a>

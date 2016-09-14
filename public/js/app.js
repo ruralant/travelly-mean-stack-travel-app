@@ -41,10 +41,15 @@ function Router($stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/results.html',
 
     })
-    .state('userProfile', {
-      url: '/user/profile',
+    .state('userShow', {
+      url: '/users/:id',
       templateUrl: '/templates/users/show.html',
-      controller: "UserController as user"
+      controller: "UsersShowController as usersShow"
+    })
+    .state('userIndex', {
+      url: '/users',
+      templateUrl: '/templates/users/index.html',
+      controller: "UsersIndexController as users"
     })
     .state('landingPage', {
       url: '/landing-page',

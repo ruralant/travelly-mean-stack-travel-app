@@ -6,6 +6,10 @@
       <h3>{{ Carriers.Name }}</h3>
       <h2>£ {{ result.MinPrice }}</h2>
     </div>
-  </div>
-  
+  </div> 
+</div>
+
+<div ng-if="!main.currentUser">
+  <h3>Register for seeing more results!</h3>
+  <a ui-sref="register">Register Here</a>
 </div>
