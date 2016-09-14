@@ -13,7 +13,7 @@ function RegisterController($auth, $state, $rootScope) {
       url: '/api/register'
     })
     .then(function(res){
-      $state.go('userProfile');
+      $state.go('userShow');
     });
   }
 }

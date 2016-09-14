@@ -41,15 +41,20 @@ function Router($stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/results.html',
 
     })
+    .state('userIndex', {
+      url: '/users',
+      templateUrl: '/templates/users/index.html',
+      controller: "UsersIndexController as users"
+    })
     .state('userShow', {
       url: '/users/:id',
       templateUrl: '/templates/users/show.html',
       controller: "UsersShowController as usersShow"
     })
-    .state('userIndex', {
-      url: '/users',
-      templateUrl: '/templates/users/index.html',
-      controller: "UsersIndexController as users"
+    .state("userEdit", {
+      url: "/users/:id/edit",
+      templateUrl: "/templates/users/edit.html",
+      controller: "UsersEditController as usersEdit"
     })
     .state('landingPage', {
       url: '/landing-page',

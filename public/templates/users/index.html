@@ -1,3 +1,4 @@
-<div ng-repeat="user in users.all">
+<div ng-repeat="user in users.all" ui-sref="usersShow({ id: user._id })">
   {{ user.username }}
+  <img src="{{ user.profilePicture }}">
 </div>

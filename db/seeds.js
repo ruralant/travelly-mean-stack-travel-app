@@ -9,21 +9,21 @@ User.collection.drop();
 
 User.create([
   {
-    username: ,
-    email: ,
-    profilePicture: ,
+    username: "Edward",
+    email: "ed@ed",
+    profilePicture: "...",
     password: "password",
     passwordConfirmation: "password" 
   },{
-    username: ,
-    email: ,
-    profilePicture: ,
+    username: "Adriana",
+    email: "adri@adri",
+    profilePicture: "...",
     password: "password",
     passwordConfirmation: "password" 
   },{
-    username: ,
-    email: ,
-    profilePicture: ,
+    username: "Marta",
+    email: "marta@marta",
+    profilePicture: "...",
     password: "password",
     passwordConfirmation: "password"
   }
