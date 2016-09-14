@@ -3,12 +3,11 @@ var base64 = require('base-64');
 var _ = require('underscore');
 
 function index(req, res) {
-  // requesting the Sabre token. Base64 is converting a string in a base64 encoded. Required by Sabre for getting the access to the token.
   request.post({
     url: "https://api.test.sabre.com/v2/auth/token",
     headers: {
       'Authorization': 'Basic ' + base64.encode(process.env.SABRE_CLIENT_ID + ':' + process.env.SABRE_CLIENT_SECRET),
-      'Content-Type': 'application/x-www-form-urlencoded' // alias long string
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
     form: {
       grant_type: 'client_credentials'
@@ -65,7 +64,6 @@ function index(req, res) {
         delete quote.InboundLeg.DestinationId;
 
         return quote;
-        // return the locations converting them in IataCode.
       }).filter(function(quote) {
         return destinations.indexOf(quote.OutboundLeg.Destination.IataCode) !== -1 && quote.MinPrice <= req.query.budget;
       });
