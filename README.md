@@ -1,65 +1,65 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) 
 
-# Project #4: Travelly: A Travel App made with Angular
+# Project #4: Travelly: A Travel App made with AngularJS
 
-![](https://s3-eu-west-1.amazonaws.com/photo-aid/Schermata+2016-08-12+alle+00.29.12.png) 
+![](https://s3-eu-west-1.amazonaws.com/travelly/screenshot.png) 
 
 ##What is Travelly:
 
-**Travelly** is a combination between a photosharing platform and a foundraising website.
+**Travelly** is a single page page application created using AngularJS that allows users to search for travel destinations based on their interests.
 
-For a few years I worked as professional photographer and also nowadays I am consider myself a photo enthusiast. Moreover I alwasy been involved in the charity sector through volonteer work. With **Photo-Aid** I decided to combine this two passions allowin people to donate their photos to the charities. 
+Differently from the most common flight-search websites, Travelly is providing to the user a list of destinations based on the following params:
 
-When we shoots photos with the mobile phone and cameras we usually shoot 3 or 4 photos of the same subject in order to be able so select the best one. The idea was to create a website that allows the donors to contribute to charitable initiatives with both dontations and with the photos shooted in excess.
+- budget
+- nearest airport
+- dates
+- a theme
+ 
 
-From the charitis prospective, Photo Aid allows them to create campaigns and receive donation in form of both money or photos.  
-
-#### Here you can see the live version: <https://photoaid.herokuapp.com/>
-
-
+#### Here you can see the live version: <https://travelly-app.herokuapp.com/>
 
 
 ## Technologies Used: 
 
-The entire project is based on **Ruby on Rails 5** and **Bootstrap 4 Alpha**, with the following gems:
+The entire project is based on **AngularJS**, two APIs (**SkyScanner** and **Sabre**) and **Bootstrap 4 Alpha**.
 
-- **Ruby**
-- **Ruby in Rails**
-- **jQuery**
+The all the technologies used are the following one:
+
+- **AngularJS**
+- **SkyScanner API**
+- **Sabre API**
+- **Satellizer**
+- **AWS S3 Storage**
+- **Bcrypt**
 - **HTML5**
 - **SASS**
-- **Devise**
 - **Bootstrap 4**
-- **Carrierwave**
-- **Rmagick**
-- **Fog**
-- **Stripe**
-- **AWS S3 Storage**
 - **Heroku**
-- **Postgresql Database**
 - **Sublime Editor**
+- **Insomnia**
 - **Trello**
 - **Adobe Photoshop**
+- **Omnigraffe**
 - **Balsamic**
 - **MacDown**
+- **Slack**
 
-**Devise** is a useful gem for implement an authentication system. I had to choose between **Devise** and **Bcrypt** however, due to the duration of the project, I prefereed Devise because is featured with several useful tools for build quickly a strong authentication system.
-
-I used **Carrierwave** and **Rmagick** for managing the images, from the upload to the storing and resizing.
-
-As last gem I used **Stripe** in order to create a check-out for the donors.
+The user can login with a combination of **email/password** and **Facebook** and **Twitter**.
+For created the whole register/login system I used **Bcrypt** for the registration process by username, email and password and **Satellizer** for creating the login system using the **Facebook** and **Twitter API**.
 
 --
 
 For accomplice the project I also used the following tools:
 
+- **Insomnia** for testing the APIs and later for sending request to my own back-end application.
+
 - **Trello**: as project management tool.
 
 - **Balasamiq**: for the creation of the wireframe
 
-- **Draw.io** and **Omnigraffe**: for the ERD
+- **Omnigraffe**: for the ERD
 
-- **Photoshop CC**: I used it mainly for create a consistency in the photo resulution and weight before upload and before using *Rmagic*.
+- **Photoshop CC**: I used it mainly for create a consistency in the photo resolution and weight.
 
 - **MacDown**: as text editor for creating the ReadMe file.
 
@@ -70,11 +70,11 @@ For accomplice the project I also used the following tools:
 
 I designed the website using the "mobile first" method:
 
-![](https://s3-eu-west-1.amazonaws.com/photo-aid/Mobile+Mockup.png)
+![](https://s3-eu-west-1.amazonaws.com/travelly/Mobile+Mokeup.png)
 
 In a later stage I also designed also the web version:
 
-![](https://s3-eu-west-1.amazonaws.com/photo-aid/New+Mockup+2.png)
+![](https://s3-eu-west-1.amazonaws.com/travelly/Desktop+Mokeup.png)
 
 --
 
@@ -87,20 +87,17 @@ There are a few sections that needs to be styled better, in particular the foote
 ---
 ##Future Developments
 
-**v1.1**
-UX bugfix. 
-
 **v1.5**
-Add a comments section in the Campaign page.
+Messeging system between users. 
 
 **v2.0**
-Allow more interactions between users with the creations of public profiles.
+Add Google Maps API for display the search results on the Map.
 
 ---
 ###For run the app locally, follow the next steps:
 
 - Clone the app from Github
-- Run "bundle" on the terminal to get the required gems.
-- Run "rails db:create db:migrate db:seed" to load the provided database.
-- Run "rails s" to start the server
-- On the browser, go to "localhost:3000"
+- Run "npm i" on the terminal to set up Nodemon.
+- Run "node db/seeds" to load the provided user database.
+- Run "nodemon" to start the server
+- On the browser, go to "localhost:8000"
