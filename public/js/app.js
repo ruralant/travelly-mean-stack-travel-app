@@ -59,6 +59,10 @@ function Router($stateProvider, $urlRouterProvider) {
     .state('landingPage', {
       url: '/landing-page',
       templateUrl: '/templates/landing.html',
+    })
+    .state('usersmatch', {
+      url: '/users-match',
+      templateUrl: '/templates/usersmatch.html',
     });
 
   $urlRouterProvider.otherwise("/landing-page"); 

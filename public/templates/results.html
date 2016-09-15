@@ -1,7 +1,6 @@
 <div id="result-page">
   <div class="row">
     <div class="card col-md-4" ng-repeat="result in main.searchResults">
-      <!-- <img class="card-img-top" ng-src="{{ }}" alt="Card image cap"> -->
       <div class="card-block">
         <h3 class="card-title">{{ result.OutboundLeg.Destination.CityName }}</h4>
         <h3>{{ result.OutboundLeg.Carriers.Name }}</h3>
@@ -10,15 +9,8 @@
     </div> 
   </div>
 
-  Users
-
-  <div class="row">
-    <div class="card col-md-4" ng-repeat="users in main.similarUsers">
-      <!-- <img class="card-img-top" ng-src="{{ }}" alt="Card image cap"> -->
-      <div class="card-block">
-        <h3 class="card-title">{{ users.username }}</h4>
-      </div>
-    </div> 
+  <div ng-if="main.currentUser">
+    <a ui-sref="usersmatch" class="btn btn-outline-danger">Buddy Up!</a>
   </div>
 
   <div ng-if="!main.currentUser">
