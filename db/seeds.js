@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var User = require('../models/user');
 
 mongoose.Promise = bluebird;
-mongoose.connect("mongodb://localhost/travelly-app");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/travelly-app");
 
 User.collection.drop();
 

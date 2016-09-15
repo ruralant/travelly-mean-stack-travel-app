@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 var routes = require('./config/routes');
 
 mongoose.Promise = bluebird;
-mongoose.connect("mongodb://localhost/travelly-app");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/travelly-app");
 
 app.use(cors());
 app.use(bodyParser.json());
