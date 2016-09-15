@@ -1,20 +1,27 @@
-<div id="result-page">
+<div id="results-page">
+
   <div class="row">
     <div class="card col-md-4" ng-repeat="result in main.searchResults">
       <div class="card-block">
-        <h3 class="card-title">{{ result.OutboundLeg.Destination.CityName }}</h4>
+        <h3 class="card-title">{{ result.OutboundLeg.Destination.CityName }}</h3>
         <h3>{{ result.OutboundLeg.Carriers.Name }}</h3>
-        <h4>£ {{ result.MinPrice }}</h5>
+        <h4>£ {{ result.MinPrice }}</h4>
       </div>
     </div> 
   </div>
 
-  <div ng-if="main.currentUser">
-    <a ui-sref="usersmatch" class="btn btn-outline-danger">Buddy Up!</a>
+  <div id="results-page-buttons">
+
+    <div ng-if="main.currentUser">
+      <a ui-sref="usersmatch" class="btn btn-outline-danger">Buddy Up</a>
+    </div>
+
+    <div ng-if="!main.currentUser">
+      <h3 id="askForRegister">Looking for travel-buddies? Register with us!</h3>
+      <a ui-sref="login" class="btn btn-outline-danger">Login</a>
+    </div>
+
   </div>
 
-  <div ng-if="!main.currentUser">
-    <h3>Register for seeing more results!</h3>
-    <a ui-sref="register">Register Here</a>
-  </div>
 </div>
+

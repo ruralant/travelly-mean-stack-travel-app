@@ -11,7 +11,7 @@ User.create([
   {
     username: "Edward Kemp",
     email: "ed@ed",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0370.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/ed.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -85,7 +85,7 @@ User.create([
   },{
     username: "Adriana Black",
     email: "adri@adri",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0194.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/adri.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -153,267 +153,9 @@ User.create([
             "locationId" : 40595
         }] 
   },{
-    username: "Marta Venezia",
-    email: "marta@marta",
-    profilePicture: "...",
-    password: "password",
-    passwordConfirmation: "password",
-    filteredSearchResults: [{
-            "locationName" : "Bangkok",
-            "locationId" : 42795
-        },
-        {
-            "locationName" : "Bangkok",
-            "locationId" : 42795
-        },
-        {
-            "locationName" : "Singapore",
-            "locationId" : 81870
-        },
-        {
-            "locationName" : "Singapore",
-            "locationId" : 81870
-        },
-        {
-            "locationName" : "Manila",
-            "locationId" : 68284
-        },
-        {
-            "locationName" : "Istanbul",
-            "locationId" : 59316
-        },
-        {
-            "locationName" : "Jeddah",
-            "locationId" : 60932
-        },
-        {
-            "locationName" : "Kuala Lumpur",
-            "locationId" : 64012
-        },
-        {
-            "locationName" : "Hong Kong",
-            "locationId" : 56615
-        },
-        {
-            "locationName" : "Doha",
-            "locationId" : 47592
-        },
-        {
-            "locationName" : "Doha",
-            "locationId" : 47592
-        },
-        {
-            "locationName" : "Luanda",
-            "locationId" : 65348
-        },
-        {
-            "locationName" : "Cairo",
-            "locationId" : 44617
-        },
-        {
-            "locationName" : "Addis Ababa",
-            "locationId" : 40148
-            },
-        {
-            "locationName" : "Kuwait",
-            "locationId" : 64105
-        },
-        {
-            "locationName" : "Tel Aviv",
-            "locationId" : 84326
-        },
-        {
-            "locationName" : "Tel Aviv",
-            "locationId" : 84326
-        },
-        {
-            "locationName" : "Bogota",
-            "locationId" : 42983
-        },
-        {
-            "locationName" : "Tehran",
-            "locationId" : 58913
-        },
-        {
-            "locationName" : "Tehran",
-            "locationId" : 58913
-        },
-        {
-            "locationName" : "Dubai",
-            "locationId" : 48018
-        },
-        {
-            "locationName" : "Washington",
-            "locationId" : 58436
-        },
-        {
-            "locationName" : "San Francisco",
-            "locationId" : 81727
-        },
-        {
-            "locationName" : "Havana",
-            "locationId" : 56150
-        },
-        {
-            "locationName" : "Chennai",
-            "locationId" : 67649
-        },
-        {
-            "locationName" : "Tokyo",
-            "locationId" : 70788
-        },
-        {
-            "locationName" : "Kathmandu",
-            "locationId" : 63965
-        },
-        {
-            "locationName" : "Karachi",
-            "locationId" : 63385
-        },
-        {
-            "locationName" : "Colombo",
-            "locationId" : 45186
-        },
-        {
-            "locationName" : "Moscow",
-            "locationId" : 82495
-        },
-        {
-            "locationName" : "Warsaw",
-            "locationId" : 90711
-        },
-        {
-            "locationName" : "Warsaw",
-            "locationId" : 90711
-        },
-        {
-            "locationName" : "Vienna",
-            "locationId" : 88773
-        },
-        {
-            "locationName" : "Vienna",
-            "locationId" : 88773
-        },
-        {
-            "locationName" : "Madrid",
-            "locationId" : 67652
-        },
-        {
-            "locationName" : "Porto",
-            "locationId" : 72991
-        },
-        {
-            "locationName" : "Lisbon",
-            "locationId" : 65747
-        },
-        {
-            "locationName" : "Tallinn",
-            "locationId" : 84316
-        },
-        {
-            "locationName" : "Copenhagen",
-            "locationId" : 45336
-        },
-        {
-            "locationName" : "Copenhagen",
-            "locationId" : 45336
-        },
-        {
-            "locationName" : "Johannesburg",
-            "locationId" : 61362
-        },
-        {
-            "locationName" : "Johannesburg",
-            "locationId" : 61362
-        },
-        {
-            "locationName" : "Casablanca",
-            "locationId" : 45198
-        },
-        {
-            "locationName" : "Casablanca",
-            "locationId" : 45198
-        },
-        {
-            "locationName" : "Milan",
-            "locationId" : 68768
-        },
-        {
-            "locationName" : "Milan",
-            "locationId" : 65742
-        },
-        {
-            "locationName" : "Luqa",
-            "locationId" : 68177
-        },
-        {
-            "locationName" : "Corfu",
-            "locationId" : 44869
-        },
-        {
-            "locationName" : "Cork",
-            "locationId" : 73083
-        },
-        {
-            "locationName" : "Shannon",
-            "locationId" : 82110
-        },
-        {
-            "locationName" : "Amsterdam",
-            "locationId" : 40595
-        },
-        {
-            "locationName" : "Amsterdam",
-            "locationId" : 40595
-        },
-        {
-            "locationName" : "Stavanger",
-            "locationId" : 82487
-        },
-        {
-            "locationName" : "Stavanger",
-            "locationId" : 82487
-        },
-        {
-            "locationName" : "Riga",
-            "locationId" : 79576
-        },
-        {
-            "locationName" : "Brussels",
-            "locationId" : 43141
-        },
-        {
-            "locationName" : "Sofia",
-            "locationId" : 82150
-        },
-        {
-            "locationName" : "Sofia",
-            "locationId" : 82150
-        },
-        {
-            "locationName" : "Geneva",
-            "locationId" : 54833
-        },
-        {
-            "locationName" : "Paris",
-            "locationId" : 44759
-        },
-        {
-            "locationName" : "Prague",
-            "locationId" : 75383
-        },
-        {
-            "locationName" : "Prague",
-            "locationId" : 75383
-        },
-        {
-            "locationName" : "Dusseldorf",
-            "locationId" : 47891
-        }]
-  },{
     username: "Andrew Smith",
     email: "andrew@andrew",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0457.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/andrew.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -451,7 +193,7 @@ User.create([
   },{
     username: "Axel Berdugo",
     email: "axel@axel",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0194.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/axel.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -681,7 +423,7 @@ User.create([
   },{
     username: "Becky Bolton",
     email: "becky@becky",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0242.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/bex.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -767,7 +509,7 @@ User.create([
   },{
     username: "Ben Blowers",
     email: "ben@ben",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0324.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/ben.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -837,7 +579,7 @@ User.create([
   },{
     username: "Cameron Perrin",
     email: "cameron@cameron",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0457.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/cameron.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -911,7 +653,7 @@ User.create([
   },{
     username: "Chetan Barot",
     email: "chetan@chetan",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0370.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/chetan.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -1245,7 +987,7 @@ User.create([
   },{
     username: "Chris Casey",
     email: "chris@chris",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0324.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/chris.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -1523,7 +1265,7 @@ User.create([
   },{
     username: "Jason Lai",
     email: "jason@jason",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0457.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/jason.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -1565,7 +1307,7 @@ User.create([
   },{
     username: "Jeremy Smith",
     email: "jeremy@jeremy",
-    profilePicture: "...",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/jeremy.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -1647,7 +1389,7 @@ User.create([
   },{
     username: "Julian Wyatt",
     email: "julian@julian",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0457.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/julian.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -1673,7 +1415,7 @@ User.create([
   },{
     username: "Will Cook",
     email: "will@will",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0457.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/will.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -1843,7 +1585,7 @@ User.create([
   },{
     username: "Kaitlyn Tierney",
     email: "kat@kat",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0457.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/kat.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{
@@ -1957,7 +1699,7 @@ User.create([
   },{
     username: "Shu Chia",
     email: "shu@shu",
-    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/_MG_0457.jpg",
+    profilePicture: "https://s3-eu-west-1.amazonaws.com/travelly/ProfilePictures/shu.jpg",
     password: "password",
     passwordConfirmation: "password",
     filteredSearchResults: [{

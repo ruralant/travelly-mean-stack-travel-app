@@ -21,7 +21,7 @@ nav ul {
   margin-top: .3rem;
 }
 
-#register-page, #landing-page, #login-page, #search-page {
+#register-page, #landing-page, #login-page, #search-page, #buddy-page, #results-page {
   text-align: center;
 }
 
@@ -46,9 +46,14 @@ nav ul {
 
 #landing-page a {
   color: #ef6f4c;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 3%;
   border-color: #ef6f4c;
+}
+
+#landing-page a:hover {
+  background-color: #ef6f4c;
+  color: #edefed;
 }
 
 #register-page {
@@ -90,39 +95,65 @@ nav ul {
 
 #login-buttons {
   margin-top: 5%;
+  color: 
 }
 
 #login-forms {
   width: 60%;
 }
 
-#result-page {
+#results-page {
   margin-top: .75rem;
+  text-align: center;
 }
 
-#result-page.card {
+#results-page.card {
   opacity: 1;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
-#result-page .card:hover {
+#results-page .card:hover {
   opacity: .5;
 }
 
-#result-page .card-block {
+#results-page .card-block {
   text-align: center;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-#result-page h3 {
+#results-page h3 {
 font-weight: 700;
 }
 
-#result-page h4 {
+#results-page h4 {
 font-weight: 300;
+}
+
+#results-page a {
+  margin: 4rem 0;
+  border-color: #ef6f4c;
+}
+
+#results-page .row {
+  margin-bottom: 3rem;
+}
+
+#buddy-page {
+  margin: auto;
+  text-align: center;
+  margin-top: 4rem;
+  width: 80%;
+}
+
+/*#buddy-page .row {
+  margin-bottom: 3rem;
+}*/
+
+#askForRegister {
+  color: #ef6f4c;
 }
 
 .navbar {
@@ -168,3 +199,24 @@ font-weight: 300;
   background-color: #ef6f4c;
   color: #edefed;
 }
+
+.results-page-buttons {
+  margin: 3rem 0;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    nav {
+      height: 3rem;
+    }
+
+    .card{
+      height: 280px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+}
+

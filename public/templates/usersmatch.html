@@ -1,8 +1,12 @@
-<div class="row">
-  <div class="card col-md-4" ng-repeat="users in main.similarUsers">
-    <img class="card-img-top" ng-src="{{ users.profilePicture }}" alt="Card image cap">
-    <div class="card-block">
-      <h3 class="card-title">{{ users.username }}</h4>
+<div id="buddy-page">
+
+  <div class="row m-x-auto">
+    <div class="card col-md-3" ng-repeat="users in main.similarUsers">
+      <img class="card-img-top" ng-src="{{ users.profilePicture }}" alt="Card image">
+      <div class="card-block">
+        <h4 class="card-title">{{ users.username }}</h4>
+      </div>
     </div>
-  </div> 
+  </div>
+  
 </div>
