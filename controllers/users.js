@@ -1,7 +1,17 @@
 var User = require('../models/user');
 
 function usersIndex(req, res) {
-  User.find(function(err, users) {
+
+  var params = {};
+
+  if(req.query.locationIds) {
+    var locationIds = req.query.locationIds.split(',').map(function(str) {
+      return parseInt(str, 10);
+    });
+    params['filteredSearchResults.locationId'] = { $in: locationIds };
+  }
+
+  User.find(params, function(err, users) {
     if(err) return res.status(500).json(err);
     return res.status(200).json(users);
   });

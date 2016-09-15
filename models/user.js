@@ -9,7 +9,7 @@ var userSchema = new mongoose.Schema({
   facebookId: Number,
   twitterId: Number,
   profilePicture: String,
-  searchParams: []
+  filteredSearchResults: []
 });
 
 userSchema.virtual('password')

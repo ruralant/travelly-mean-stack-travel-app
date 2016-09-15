@@ -16,9 +16,26 @@ function MainController($auth, $state, $rootScope, User) {
     $state.go("/");
   }
 
+  function filterStoredUserSearch(searchResults) {
+    var filteredSearchResults = [];
+
+    searchResults.forEach(function (searchResult, index) {
+      var filteredSearchResult = {
+        locationId: searchResult.OutboundLeg.Destination.PlaceId,
+        locationName: searchResult.OutboundLeg.Destination.CityName
+      };
+
+      filteredSearchResults.push(filteredSearchResult);
+    });
+
+    return filteredSearchResults;
+  };
+
   this.storeUserSearch = function() {
+    this.filteredSearchResults = filterStoredUserSearch(this.searchResults);
+
     User.update({ id: this.currentUser._id },
-      { searchParams: this.searchResults},
+      { filteredSearchResults: this.filteredSearchResults },
       function(res) {
         self.currentUser = res;
         console.log(self.currentUser);
@@ -31,7 +48,15 @@ function MainController($auth, $state, $rootScope, User) {
 
   $rootScope.$on("searchResults", function(e, data) {
     self.searchResults = data;
-    console.log("Here are all the flights to save.. ", data);
+
     self.storeUserSearch();
+    var locationIds = self.filteredSearchResults.map(function(result) {
+      return result.locationId;
+    });
+
+    User.query({ locationIds: locationIds.join(',') }, function(users) {
+      self.similarUsers = users;
+      console.log("This are the similar users: ", users)
+    });
   });
 }

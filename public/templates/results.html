@@ -10,6 +10,17 @@
     </div> 
   </div>
 
+  Users
+
+  <div class="row">
+    <div class="card col-md-4" ng-repeat="users in main.similarUsers">
+      <!-- <img class="card-img-top" ng-src="{{ }}" alt="Card image cap"> -->
+      <div class="card-block">
+        <h3 class="card-title">{{ users.username }}</h4>
+      </div>
+    </div> 
+  </div>
+
   <div ng-if="!main.currentUser">
     <h3>Register for seeing more results!</h3>
     <a ui-sref="register">Register Here</a>

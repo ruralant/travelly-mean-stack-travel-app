@@ -14,112 +14,112 @@ User.create([
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Heathrow" 
+    filteredSearchResults: [] 
   },{
     username: "Adriana Black",
     email: "adri@adri",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Luton" 
+    filteredSearchResults: [] 
   },{
     username: "Marta Venezia",
     email: "marta@marta",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Andrew Smith",
     email: "andrew@andrew",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Axel Berdugo",
     email: "axel@axel",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Becky Bolton",
     email: "becky@becky",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Ben Blowers",
     email: "ben@ben",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Cameron Perrin",
     email: "cameron@cameron",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Chetan Barot",
     email: "chetan@chetan",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Chris Casey",
     email: "chris@chris",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Jason Lai",
     email: "jason@jason",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Jeremy Smith",
-    email: "chris@chris",
+    email: "jeremy@jeremy",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Julian Wyatt",
-    email: "chris@chris",
+    email: "julian@julian",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Will Cook",
-    email: "chris@chris",
+    email: "will@will",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Kaitlyn Tierney",
-    email: "chris@chris",
+    email: "kat@kat",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   },{
     username: "Shu Chia",
-    email: "chris@chris",
+    email: "shu@shu",
     profilePicture: "...",
     password: "password",
     passwordConfirmation: "password",
-    location: "London Stansted"
+    filteredSearchResults: []
   }
 ], function(err, users) {
   console.log(users);

@@ -120,7 +120,6 @@ function SearchController(Flights, $http, $rootScope, $state) {
   this.search = function() {
     Flights.query(this.budget, this.location, this.departureDate, this.returnDate, this.theme)
     .then(function(results){
-      console.log(results);
       $rootScope.$broadcast("searchResults", results);
       $state.go("results");
     });
