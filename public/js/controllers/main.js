@@ -18,10 +18,10 @@ function MainController($auth, $state, $rootScope, User) {
 
   this.storeUserSearch = function() {
     User.update({ id: this.currentUser._id },
-      { searchParams: this.searchResults.OutboundLeg.Destination.PlaceId},
+      { searchParams: this.searchResults},
       function(res) {
         self.currentUser = res;
-        console.log("Current User: ", self.currentUser);
+        console.log(self.currentUser);
       });
   };
 

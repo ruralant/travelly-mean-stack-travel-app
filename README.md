@@ -30,6 +30,8 @@ The all the technologies used are the following one:
 - **Sabre API**
 - **Satellizer**
 - **AWS S3 Storage**
+- **NodeJS**
+- **ExpressJS**
 - **Bcrypt**
 - **HTML5**
 - **SASS**
@@ -97,7 +99,7 @@ Add Google Maps API for display the search results on the Map.
 ###For run the app locally, follow the next steps:
 
 - Clone the app from Github
-- Run "npm i" on the terminal to set up Nodemon.
+- Run "npm i" on the terminal to set up Express.
 - Run "node db/seeds" to load the provided user database.
 - Run "nodemon" to start the server
 - On the browser, go to "localhost:8000"
