@@ -18,8 +18,13 @@ app.use(express.static('public'));
 
 app.use('/api', routes);
 
-app.listen(8000, function() {
-  console.log("Express is up and running!");
+// app.listen(8000, function() {
+//   console.log("Express is up and running!");
+// });
+
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
 
 module.exports = app;
