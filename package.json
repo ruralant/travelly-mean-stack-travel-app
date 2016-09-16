@@ -9,6 +9,7 @@
     "bcrypt": "^0.8.7",
     "bluebird": "^3.4.6",
     "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
     "bucket": "0.0.1",
     "cors": "^2.8.1",
     "express": "^4.14.0",
@@ -29,7 +30,7 @@
   },
   "scripts": {
     "start": "node app",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
