@@ -65,7 +65,7 @@ For accomplice the project I also used the following tools:
 
 - **MacDown**: as text editor for creating the ReadMe file.
 
-- **Heroku**: for deploy the webiste.
+- **Heroku**: for deploy the website.
 
 
 --
@@ -80,9 +80,9 @@ In a later stage I also designed also the web version:
 
 --
 
-The project is based on **three modules**: **Users** (that comprehensive of two role: charity and donor), **Campaigns** and **Photos**. At the start I planned to used for modules but a the end of the first day I dediced to unify the Users and Charities under one module for making esier to implement the authentication system and the reletionships between modules. 
+The project is based on **three modules**: **Users** (that comprehensive of two role: charity and donor), **Campaigns** and **Photos**. At the start I planned to use four modules but a the end of the first day I decided to unify the Users and Charities under one module for making easier to implement the authentication system and the relationships between modules. 
 
-##Recordgnised Bugs
+##Recognised Bugs
 
 There are a few sections that needs to be styled better, in particular the footer of the landing page. Moreover, the project needs some adjustments on the mobile version using more **media queries**. 
 
@@ -90,7 +90,7 @@ There are a few sections that needs to be styled better, in particular the foote
 ##Future Developments
 
 **v1.5**
-Messeging system between users. 
+Messaging system between users. 
 
 **v2.0**
 Add Google Maps API for display the search results on the Map.
