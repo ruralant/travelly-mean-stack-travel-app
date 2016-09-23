@@ -80,7 +80,7 @@ In a later stage I also designed also the web version:
 
 --
 
-The project is based on **three modules**: **Users** (that comprehensive of two role: charity and donor), **Campaigns** and **Photos**. At the start I planned to use four modules but a the end of the first day I decided to unify the Users and Charities under one module for making easier to implement the authentication system and the relationships between modules. 
+
 
 ##Recognised Bugs
 
