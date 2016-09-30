@@ -210,7 +210,7 @@ font-weight: 300;
   and (-webkit-min-device-pixel-ratio: 2) {
 
     nav {
-      height: 3rem;
+      min-height: 3rem;
     }
 
     .card{
