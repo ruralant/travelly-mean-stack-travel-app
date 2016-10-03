@@ -107,7 +107,8 @@ nav ul {
   text-align: center;
 }
 
-#results-page.card {
+#results-page .card {
+  height: 250px;
   opacity: 1;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
@@ -139,10 +140,6 @@ font-weight: 300;
 
 #results-page .row {
   margin-bottom: 3rem;
-}
-
-#results-cards {
-  height: 250px;
 }
 
 #buddy-page {
