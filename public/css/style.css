@@ -141,6 +141,10 @@ font-weight: 300;
   margin-bottom: 3rem;
 }
 
+#results-cards {
+  height: 250px;
+}
+
 #buddy-page {
   margin: auto;
   text-align: center;
@@ -174,7 +178,6 @@ font-weight: 300;
 }
 
 .card{
-  /*height: 250px;*/
   padding-right: 0;
   padding-left: 0;
 }
