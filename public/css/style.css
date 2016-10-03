@@ -190,8 +190,8 @@ font-weight: 300;
 }
 
 .card-img-top{
-  width:100%;
-  height:auto;
+  /*width:100%;
+  height:auto;*/
   margin: 0;
 }
 
