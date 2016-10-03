@@ -1,7 +1,7 @@
 <div id="results-page">
 
   <div class="row">
-    <div class="card col-md-4" id="results-card" ng-repeat="result in main.searchResults">
+    <div class="card col-md-4" ng-repeat="result in main.searchResults">
       <div class="card-block">
         <h3 class="card-title">{{ result.OutboundLeg.Destination.CityName }}</h3>
         <h3>{{ result.OutboundLeg.Carriers.Name }}</h3>
