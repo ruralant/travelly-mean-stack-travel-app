@@ -54,6 +54,7 @@ function index(req, res) {
         quote.InboundLeg.Origin = _.findWhere(places, { PlaceId: quote.InboundLeg.OriginId });
 
         quote.InboundLeg.Destination = _.findWhere(places, { PlaceId: quote.InboundLeg.DestinationId });
+        
         // deleting unneccesary informations
         delete quote.OutboundLeg.CarrierIds;
         delete quote.OutboundLeg.OriginId;
