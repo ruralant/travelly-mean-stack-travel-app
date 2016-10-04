@@ -1,7 +1,7 @@
 var User = require('../models/user');
 var request = require('request-promise');
 var jwt = require('jsonwebtoken');
-var secret = require('../config/token').secret
+var secret = require('../config/token').secret;
 var qs = require('qs');
 
 function login(req, res) {
@@ -11,7 +11,7 @@ function login(req, res) {
       client_id: process.env.FACEBOOK_API_KEY,
       client_secret: process.env.FACEBOOK_API_SECRET,
       code: req.body.code,
-      redirect_uri: "https://travelly-app.herokuapp.com"
+      redirect_uri: "https://travelly-app.herokuapp.com/"
     },
     json: true
   }).then(function(access_token) {
