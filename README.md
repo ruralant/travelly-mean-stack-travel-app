@@ -89,11 +89,18 @@ There are a few sections that needs to be styled better, in particular the foote
 ---
 ##Future Developments
 
-**v1.5**
-Messaging system between users. 
+**v1.1** (04/10/2016)
+Login Bugfix
+
+**v1.2**
+Form Validation
 
 **v2.0**
 Add Google Maps API for display the search results on the Map.
+
+**v3.0**
+Messaging system between users. 
+
 
 ---
 ###For run the app locally, follow the next steps:
