@@ -7,13 +7,13 @@
     <div class="form-group m-x-auto">
       <label>Username</label>
       <input type="text" name="username" ng-model="register.user.username" class="form-control" ng-required="true" ng-minlength="3">
-      <p ng-show="registerFrom.username.$invalid">Your User Name has to be at least 3 digits long</p>
+      <p ng-show="registerFrom.username.$invalid && registerFrom.username.$touched">Your User Name has to be at least 3 digits long</p>
     </div>
 
     <div class="form-group m-x-auto">
       <label>Email</label>
       <input type="email" name="email" ng-model="register.user.email" class="form-control" ng-required="true">
-      <p ng-show="registerFrom.email.$invalid">You have to add a valid email</p>
+      <p ng-show="registerFrom.email.$invalid && registerFrom.email.$touched">You have to add a valid email</p>
     </div>
 
     <div class="form-group m-x-auto">
@@ -24,7 +24,7 @@
     <div class="form-group m-x-auto">
       <label>Password</label>
       <input type="password" name="password" ng-model="register.user.password" class="form-control" ng-required="true" ng-minlength="6">
-      <p ng-show="registerFrom.password.$invalid">The password has to be at least 6 digits long</p>
+      <p ng-show="registerFrom.password.$invalid && registerFrom.password.$touched">The password has to be at least 6 digits long</p>
     </div>
 
     <div class="form-group m-x-auto">
