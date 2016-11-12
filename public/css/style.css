@@ -211,6 +211,26 @@ font-weight: 300;
   width: 80%;
 }
 
+.username > .ng-invalid-minlength {
+  color: red;
+  border-color: red;
+}
+
+.email > .ng-invalid-email, p {
+  color: red;
+  border-color: red;
+}
+
+.password > p {
+  color: red;
+  border-color: red;
+}
+
+.password > p {
+  color: red;
+  border-color: red;
+}
+
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
