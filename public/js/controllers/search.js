@@ -125,3 +125,8 @@ function SearchController(Flights, $http, $rootScope, $state) {
     });
   }
 };
+
+window.addEventListener('click', function(e) {
+  const holidaySelected = document.querySelector('themes["${e.target}"]')
+  console.log(holidaySelected);
+})
