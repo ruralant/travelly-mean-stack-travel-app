@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const secret = require('../config/token').secret;
 
-login((req, res) => {
+function login(req, res) {
   User.findOne({ email: req.body.email }, (err, user) => {
     if(err) res.send(500).json(err);
     if(!user || !user.validatePassword(req.body.password)) {
@@ -17,9 +17,9 @@ login((req, res) => {
       token
     });
   });
-});
+}
 
-register((req, res) => {
+function register(req, res) {
   User.create(req.body, (err, user) => {
     if(err) return res.status(400).json(err);
 
@@ -31,7 +31,7 @@ register((req, res) => {
       token
     });
   });
-});
+}
 
 module.exports = {
   login,

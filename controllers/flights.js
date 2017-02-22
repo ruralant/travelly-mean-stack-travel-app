@@ -2,7 +2,7 @@ const request = require('request-promise');
 const base64 = require('base-64');
 const _ = require('underscore');
 
-index((req, res) => {
+function index(req, res) {
   request.post({
     url: "https://api.test.sabre.com/v2/auth/token",
     headers: {
@@ -75,7 +75,7 @@ index((req, res) => {
     console.log(err);
     res.sendStatus(500);
   });
-});
+}
 
 module.exports = {
   index

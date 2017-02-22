@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const secret = require('../config/token').secret;
 const qs = require('qs');
 
-login((req, res) => {
+function login(req, res) {
   if (!req.body.oauth_token || !req.body.oauth_verifier) {
 
     return request.post({
@@ -84,7 +84,7 @@ login((req, res) => {
       res.status(500).json(err);
     });
   }
-});
+}
 
 module.exports = {
   login

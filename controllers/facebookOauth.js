@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const secret = require('../config/token').secret;
 const qs = require('qs');
 
-login((req, res) => {
+function login(req, res) {
   request.post({
     url: "https://graph.facebook.com/v2.5/oauth/access_token",
     qs: {
@@ -52,7 +52,7 @@ login((req, res) => {
       console.log(err);
       return res.status(500).json(err);
     });
-});
+}
 
 module.exports = {
   login

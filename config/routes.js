@@ -10,7 +10,7 @@ const jwt = require('jsonwebtoken');
 const secret = require('./token').secret;
 const upload = require('./upload');
 
-secureRoute((req, res, next) => {
+function secureRoute(req, res, next) {
   if(!req.headers.authorization) return res.status(401).json({ message: "Unauthorized" });
 
   let token = req.headers.authorization.replace('Bearer ', '');
@@ -20,7 +20,7 @@ secureRoute((req, res, next) => {
     req.user = payload;
     next();
   });
-});
+}
 
 router.get('/flights', flightsController.index);
 
