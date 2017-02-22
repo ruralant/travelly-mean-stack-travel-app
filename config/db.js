@@ -4,6 +4,6 @@ dbURIs = {
   production: process.env.MONGOLAB_URI || "mongodb://localhost/travelly-app"
 };
 
-module.exports = function(env) {
+module.exports = (env) => {
   return dbURIs[env];
 };

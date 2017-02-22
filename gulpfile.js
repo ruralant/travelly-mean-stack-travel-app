@@ -1,15 +1,11 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-var useref = require('gulp-useref');
-var uglify = require('gulp-uglify');
-var gulpIf = require('gulp-if');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const browserSync = require('browser-sync').create();
+const useref = require('gulp-useref');
+const uglify = require('gulp-uglify');
+const gulpIf = require('gulp-if');
 
-gulp.task('hello', function() {
-  console.log('Hello World');
-});
-
-gulp.task('sass', function(){
+gulp.task('sass', () => {
   return gulp.src('lib/scss/app.scss')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(gulp.dest('public/css'))
@@ -18,7 +14,7 @@ gulp.task('sass', function(){
     }));
 });
 
-gulp.task('browserSync', function() {
+gulp.task('browserSync', () => {
   browserSync.init({
     server: {
       baseDir: 'public'
@@ -29,7 +25,7 @@ gulp.task('browserSync', function() {
   });
 });
 
-gulp.task('useref', function(){
+gulp.task('useref', () => {
 return gulp.src(['lib/**/app.js', 'lib/**/*.js'])
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))

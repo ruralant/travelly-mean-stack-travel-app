@@ -7,7 +7,7 @@ module.exports = multer({
   storage: multerS3({
     s3,
     bucket: process.env.AWS_BUCKET_NAME,
-    contentType: function(req, file, next) {
+    contentType: (req, file, next) => {
       next(null, file.mimetype);
     },
     key: (req, file, next) => {

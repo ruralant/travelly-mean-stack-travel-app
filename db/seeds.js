@@ -1,6 +1,6 @@
-var bluebird = require('bluebird');
-var mongoose = require('mongoose');
-var User = require('../models/user');
+const bluebird = require('bluebird');
+const mongoose = require('mongoose');
+const User = require('../models/user');
 
 mongoose.Promise = bluebird;
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/travelly-app");
@@ -1735,7 +1735,7 @@ User.create([
             "locationId" : 73097
         }]
   }
-], function(err, users) {
+], (err, users) => {
   console.log(users);
   mongoose.connection.close();
 });

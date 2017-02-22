@@ -1,8 +1,8 @@
-var request = require('request-promise');
-var base64 = require('base-64');
-var _ = require('underscore');
+const request = require('request-promise');
+const base64 = require('base-64');
+const _ = require('underscore');
 
-function index(req, res) {
+index((req, res) => {
   request.post({
     url: "https://api.test.sabre.com/v2/auth/token",
     headers: {
@@ -14,7 +14,7 @@ function index(req, res) {
     },
     json: true
   })
-  .then(function(response) {
+  .then((response) => {
     return request.get({
       url: "https://api.test.sabre.com/v1/lists/supported/shop/themes/" + req.query.theme.toUpperCase(),
       headers: {
@@ -23,8 +23,8 @@ function index(req, res) {
       json: true
     });
   })
-  .then(function(results) {
-    destinations = results.Destinations.map(function(destination) {
+  .then((results) => {
+    destinations = results.Destinations.map((destination) => {
       return destination.Destination;
     });
 
@@ -33,13 +33,13 @@ function index(req, res) {
       qs: { apiKey: process.env.SKYSCANNER_API_KEY },
       json: true
     })
-    .then(function(response) {
-      var quotes = response.Quotes;
-      var places = response.Places;
-      var carriers = response.Carriers;
+    .then((response) => {
+      let quotes = response.Quotes;
+      let places = response.Places;
+      let carriers = response.Carriers;
 
-      quotes = quotes.map(function(quote) {
-        quote.OutboundLeg.Carriers = quote.OutboundLeg.CarrierIds.map(function(carrierId) {
+      quotes = quotes.map((quote) => {
+        quote.OutboundLeg.Carriers = quote.OutboundLeg.CarrierIds.map((carrierId) => {
           return _.findWhere(carriers, { CarrierId: carrierId });
         });
 
@@ -47,7 +47,7 @@ function index(req, res) {
 
         quote.OutboundLeg.Destination = _.findWhere(places, { PlaceId: quote.OutboundLeg.DestinationId });
 
-        quote.InboundLeg.Carriers = quote.InboundLeg.CarrierIds.map(function(carrierId) {
+        quote.InboundLeg.Carriers = quote.InboundLeg.CarrierIds.map((carrierId) => {
           return _.findWhere(carriers, { CarrierId: carrierId });
         });
 
@@ -65,18 +65,18 @@ function index(req, res) {
         delete quote.InboundLeg.DestinationId;
 
         return quote;
-      }).filter(function(quote) {
+      }).filter((quote) => {
         return destinations.indexOf(quote.OutboundLeg.Destination.IataCode) !== -1 && quote.MinPrice <= req.query.budget;
       });
       res.status(200).json(quotes);
     });
   })
-  .catch(function(err) {
+  .catch((err) => {
     console.log(err);
     res.sendStatus(500);
   });
-}
+});
 
 module.exports = {
-  index: index
+  index
 };

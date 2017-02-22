@@ -1,10 +1,10 @@
-var User = require('../models/user');
-var request = require('request-promise');
-var jwt = require('jsonwebtoken');
-var secret = require('../config/token').secret;
-var qs = require('qs');
+const User = require('../models/user');
+const request = require('request-promise');
+const jwt = require('jsonwebtoken');
+const secret = require('../config/token').secret;
+const qs = require('qs');
 
-function login(req, res) {
+login((req, res) => {
   if (!req.body.oauth_token || !req.body.oauth_verifier) {
 
     return request.post({
@@ -15,11 +15,11 @@ function login(req, res) {
         callback: req.body.redirectUri
       }
     })
-    .then(function(response) {
-      var token = qs.parse(response);
+    .then((response) => {
+      let token = qs.parse(response);
       res.status(200).send(token);
     })
-    .catch(function(err) {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
@@ -32,7 +32,7 @@ function login(req, res) {
         oauth_verifier: req.body.oauth_verifier
       }
     })
-    .then(function(token) {
+    .then((token) => {
       token = qs.parse(token);
 
       return request.get({
@@ -49,9 +49,9 @@ function login(req, res) {
       });
     })
 
-    .then(function(profile) {
+    .then((profile) => {
       return User.findOne({ twitterId: profile.id })
-        .then(function(user) {
+        .then((user) => {
           if(user) {
             user.twitterId = profile.id;
             user.profilePicture = profile.profile_image_url;
@@ -68,24 +68,24 @@ function login(req, res) {
         });
     })
 
-    .then(function(user) {
-      var payload = {
+    .then((user) => {
+      let payload = {
         _id: user._id,
         username: user.username,
         avatar: user.profilePicture
       };
 
-      var token = jwt.sign(payload, secret, { expiresIn: '24h' });
+      let token = jwt.sign(payload, secret, { expiresIn: '24h' });
 
-      res.status(200).json({ token: token });
+      res.status(200).json({ token });
     })
-    .catch(function(err) {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
   }
-}
+});
 
 module.exports = {
-  login: login
+  login
 };

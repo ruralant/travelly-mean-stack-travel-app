@@ -1,7 +1,7 @@
-var mongoose = require('mongoose');
-var bcrypt = require('bcrypt');
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
-var userSchema = new mongoose.Schema({
+let userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   email: String,
   githubId: Number,
@@ -13,21 +13,21 @@ var userSchema = new mongoose.Schema({
 });
 
 userSchema.virtual('password')
-  .set(function(password) {
+  .set((password) => {
     this._password = password;
     this.passwordHash = bcrypt.hashSync(this._password, bcrypt.genSaltSync(8));
   });
 
 userSchema.virtual('passwordConfirmation')
-  .get(function() {
+  .get(() => {
     return this._passwordConfirmation;
   })
-  .set(function(passwordConfirmation) {
+  .set((passwordConfirmation) => {
     this._passwordConfirmation = passwordConfirmation;
   });
 
 userSchema.path('passwordHash')
-  .validate(function(passwordHash) {
+  .validate((passwordHash) => {
     if(this.isNew) {
 
       if(!this._password) {
@@ -40,7 +40,7 @@ userSchema.path('passwordHash')
     }
   });
 
-userSchema.methods.validatePassword = function(password) {
+userSchema.methods.validatePassword = (password) => {
   return bcrypt.compareSync(password, this.passwordHash);
 };
 

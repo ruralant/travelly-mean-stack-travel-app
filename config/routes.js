@@ -1,19 +1,19 @@
-var router = require('express').Router();
+const router = require('express').Router();
 
-var facebookController = require('../controllers/facebookOauth');
-var twitterController = require('../controllers/twitterOauth');
-var authController = require('../controllers/auth');
-var usersController = require('../controllers/users');
-var flightsController = require('../controllers/flights');
+const facebookController = require('../controllers/facebookOauth');
+const twitterController = require('../controllers/twitterOauth');
+const authController = require('../controllers/auth');
+const usersController = require('../controllers/users');
+const flightsController = require('../controllers/flights');
 
-var jwt = require('jsonwebtoken');
-var secret = require('./token').secret;
-var upload = require('./upload');
+const jwt = require('jsonwebtoken');
+const secret = require('./token').secret;
+const upload = require('./upload');
 
 secureRoute((req, res, next) => {
   if(!req.headers.authorization) return res.status(401).json({ message: "Unauthorized" });
 
-  var token = req.headers.authorization.replace('Bearer ', '');
+  let token = req.headers.authorization.replace('Bearer ', '');
 
   jwt.verify(token, secret, (err, payload) => {
     if(err || !payload) return res.status(401).json({ message: "Unauthorized" });

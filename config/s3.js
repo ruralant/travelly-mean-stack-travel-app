@@ -1,4 +1,4 @@
-var aws = require('aws-sdk');
+const aws = require('aws-sdk');
 
 module.exports = new aws.S3({
   secretAccessKey: process.env.AWS_SECRET_KEY,

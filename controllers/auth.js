@@ -1,6 +1,6 @@
-var jwt = require('jsonwebtoken');
-var User = require('../models/user');
-var secret = require('../config/token').secret;
+const jwt = require('jsonwebtoken');
+const User = require('../models/user');
+const secret = require('../config/token').secret;
 
 login((req, res) => {
   User.findOne({ email: req.body.email }, (err, user) => {
@@ -9,31 +9,31 @@ login((req, res) => {
       return res.status(401).json({ message: "Credentials not valid" });
     }
 
-    var payload = { _id: user._id, username: user.username };
-    var token = jwt.sign(payload, secret, { expiresIn: 60*60*24 });
+    let payload = { _id: user._id, username: user.username };
+    let token = jwt.sign(payload, secret, { expiresIn: 60*60*24 });
 
     return res.status(200).json({
       message: "Login successful!",
-      token: token
+      token
     });
   });
 });
 
-function register(req, res) {
-  User.create(req.body, function(err, user) {
+register((req, res) => {
+  User.create(req.body, (err, user) => {
     if(err) return res.status(400).json(err);
 
-    var payload = { _id: user._id, username: user.username };
-    var token = jwt.sign(payload, secret, { expiresIn: 60*60*24 });
+    let payload = { _id: user._id, username: user.username };
+    let token = jwt.sign(payload, secret, { expiresIn: 60*60*24 });
 
     return res.status(200).json({
       message: "Thanks for registering!",
-      token: token
+      token
     });
   });
-}
+});
 
 module.exports = {
-  login: login,
-  register: register
+  login,
+  register
 };
