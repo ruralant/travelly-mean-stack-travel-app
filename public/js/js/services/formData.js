@@ -1,0 +1,1 @@
+function formData(){return{transform:function(a){var r=new FormData;return angular.forEach(a,function(a,n){a._id&&(a=a._id),n.match(/^\$/)||r.append(n,a)}),r}}}angular.module("TravellyApp").factory("formData",formData);

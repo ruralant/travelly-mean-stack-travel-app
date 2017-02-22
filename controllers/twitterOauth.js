@@ -33,7 +33,7 @@ function login(req, res) {
       }
     })
     .then(function(token) {
-      var token = qs.parse(token);
+      token = qs.parse(token);
 
       return request.get({
         url: "https://api.twitter.com/1.1/users/show.json",
@@ -88,4 +88,4 @@ function login(req, res) {
 
 module.exports = {
   login: login
-}
+};

@@ -1,202 +1,267 @@
 @import 'https://fonts.googleapis.com/css?family=Hind:300,400,700';
 @import 'https://fonts.googleapis.com/css?family=Pacifico';
+
 body {
   background-image: url("/images/TravellyBackground.jpg");
   background-size: cover;
-  font-family: 'Hind', sans-serif; }
+  font-family: 'Hind', sans-serif;
+}
 
 nav {
   min-height: 4rem;
-  box-shadow: 1px 1px 2px #999; }
+  box-shadow: 1px 1px 2px #999;
+}
 
 nav img {
-  width: 2em; }
+  width: 2em;
+}
 
 nav ul {
-  margin-top: .3rem; }
+  margin-top: .3rem;
+}
 
 #register-page, #landing-page, #login-page, #search-page, #buddy-page, #results-page {
-  text-align: center; }
+  text-align: center;
+}
 
 #search-page {
   margin-top: 4rem;
-  width: 80%; }
+  width: 80%;
+}
 
 #search-page .row {
-  margin-top: 5rem; }
+  margin-top: 5rem;
+}
 
 #search-page button {
   margin: 4rem 0;
-  border-color: #ef6f4c; }
+  border-color: #ef6f4c;
+}
 
 #landing-page {
   margin-top: 9%;
-  font-weight: 700; }
+  font-weight: 700;
+}
 
 #landing-page a {
   color: #ef6f4c;
   font-weight: 400;
   margin-top: 3%;
-  border-color: #ef6f4c; }
+  border-color: #ef6f4c;
+}
 
 #landing-page a:hover {
   background-color: #ef6f4c;
-  color: #edefed; }
+  color: #edefed;
+}
 
 #register-page {
-  margin: 3rem 0; }
+  margin: 3rem 0;
+}
 
 #register-page h1 {
   font-family: 'Pacifico', cursive;
   color: #ef6f4c;
   font-size: 3em;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+}
 
 #register-page .btn-outline-danger {
   margin: 4rem 0;
-  border-color: #ef6f4c; }
+  border-color: #ef6f4c;
+}
 
 #landing-page h1 {
   font-family: 'Pacifico', cursive;
   color: #ef6f4c;
   font-size: 5em;
-  margin: 2rem 0 3rem 0; }
+  margin: 2rem 0 3rem 0;
+}
 
 #login-page h1 {
   font-family: 'Pacifico', cursive;
   color: #ef6f4c;
-  font-size: 3em; }
+  font-size: 3em;
+}
 
 #login-page h5 {
-  margin: 3% 0; }
+  margin: 3% 0;
+}
 
 #title {
-  margin-top: 8%; }
+  margin-top: 8%;
+}
 
 #login-buttons {
-  margin-top: 5%; }
+  margin-top: 5%;
+}
 
 #login-forms {
-  width: 60%; }
+  width: 60%;
+}
 
 #results-page {
   margin-top: .75rem;
-  text-align: center; }
+  text-align: center;
+}
 
 #results-page .card {
   height: 250px;
   opacity: 1;
   -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out; }
+  transition: .3s ease-in-out;
+}
 
 #results-page .card:hover {
-  opacity: .5; }
+  opacity: .5;
+}
 
 #results-page .card-block {
   text-align: center;
   position: relative;
   top: 50%;
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+}
 
 #results-page h3 {
-  font-weight: 700; }
+font-weight: 700;
+}
 
 #results-page h4 {
-  font-weight: 300; }
+font-weight: 300;
+}
 
 #results-page a {
   margin: 4rem 0;
-  border-color: #ef6f4c; }
+  border-color: #ef6f4c;
+}
 
 #results-page .row {
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+}
 
 #buddy-page {
   margin: auto;
   text-align: center;
   margin-top: 4rem;
-  width: 80%; }
+  width: 80%;
+}
 
 /*#buddy-page .row {
   margin-bottom: 3rem;
 }*/
+
 #askForRegister {
-  color: #ef6f4c; }
+  color: #ef6f4c;
+}
 
 .navbar {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+}
 
 .card-deck-wrapper {
-  width: 70%; }
+  width: 70%;
+}
 
 .form-group {
   width: 50%;
-  margin-bottom: 3%; }
+  margin-bottom: 3%;
+}
 
 .search-form {
-  margin: 5% 0; }
+  margin: 5% 0;
+}
 
-.card {
+.card{
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+}
 
 .card img {
   opacity: 1;
   -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out; }
+  transition: .3s ease-in-out;
+}
 
 .card:hover img {
-  opacity: .5; }
+  opacity: .5;
+}
 
-.card-img-top {
-  width: 100%;
-  height: auto;
-  margin: 0; }
+.card-img-top{
+  width:100%;
+  height:auto;
+  margin: 0;
+}
 
 .btn-outline-danger:hover {
   background-color: #ef6f4c;
-  color: #edefed; }
+  color: #edefed;
+}
 
 .results-page-buttons {
-  margin: 3rem 0; }
+  margin: 3rem 0;
+}
 
 .col-lg-6 {
-  height: 16rem; }
+  height: 16rem;
+}
 
 .form-group {
-  width: 80%; }
+  width: 80%;
+}
 
 .username > .ng-invalid-minlength {
   color: red;
-  border-color: red; }
+  border-color: red;
+}
 
 .email > .ng-invalid-email, p {
   color: red;
-  border-color: red; }
+  border-color: red;
+}
 
 .password > p {
   color: red;
-  border-color: red; }
+  border-color: red;
+}
 
 .password > p {
   color: red;
-  border-color: red; }
+  border-color: red;
+}
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  nav {
-    min-height: 3rem; }
-  .card {
-    height: 280px;
-    padding-right: 0;
-    padding-left: 0; } }
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 
-@media (max-width: 768px) {
-  .navbar .navbar-nav > .nav-item {
-    float: none;
-    margin-left: .1rem; }
-  .navbar .navbar-nav {
-    float: none !important; }
-  .navbar .collapse.in, .navbar .collapsing {
-    clear: both; }
-  .navbar-brand {
-    display: none; } }
+    nav {
+      min-height: 3rem;
+    }
+
+    .card{
+      height: 280px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+}
+
+@media(max-width:768px) {
+    .navbar .navbar-nav>.nav-item {
+        float: none;
+        margin-left: .1rem;
+    }
+    .navbar .navbar-nav {
+        float:none !important;
+    }
+    .navbar .collapse.in, .navbar .collapsing  {
+        clear:both;
+    }
+    .navbar-brand {
+      display: none;
+    }
+}
+
+
+
+

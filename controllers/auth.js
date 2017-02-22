@@ -2,8 +2,8 @@ var jwt = require('jsonwebtoken');
 var User = require('../models/user');
 var secret = require('../config/token').secret;
 
-function login(req, res) {
-  User.findOne({ email: req.body.email }, function(err, user) {
+login((req, res) => {
+  User.findOne({ email: req.body.email }, (err, user) => {
     if(err) res.send(500).json(err);
     if(!user || !user.validatePassword(req.body.password)) {
       return res.status(401).json({ message: "Credentials not valid" });
@@ -17,7 +17,7 @@ function login(req, res) {
       token: token
     });
   });
-}
+});
 
 function register(req, res) {
   User.create(req.body, function(err, user) {
@@ -36,4 +36,4 @@ function register(req, res) {
 module.exports = {
   login: login,
   register: register
-}
+};

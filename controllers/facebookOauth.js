@@ -37,13 +37,13 @@ function login(req, res) {
            });
          }
          return user.save();
-      })
+      });
     }).then(function(user) {
       var payload = {
         _id: user._id,
         profilePicture: user.profilePicture,
         username: user.username
-      }
+      };
 
       var token = jwt.sign(payload, secret, { expiresIn: '24h' });
 
@@ -51,8 +51,8 @@ function login(req, res) {
     }).catch(function(err) {
       console.log(err);
       return res.status(500).json(err);
-    })
+    });
 }
 module.exports = {
   login: login
-} 
+};

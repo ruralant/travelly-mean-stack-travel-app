@@ -1,0 +1,1 @@
+function UsersShowController(e,o){this.selected=e.get(o.params),this.delete=function(){this.selected.$remove(function(){o.go("landing")})}}angular.module("TravellyApp").controller("UsersShowController",UsersShowController),UsersShowController.$inject=["User","$state"];

@@ -1,0 +1,1 @@
+function User(e){return e("/api/users/:id",{id:"@_id"},{update:{method:"PUT"}})}angular.module("TravellyApp").factory("User",User),User.$inject=["$resource"];

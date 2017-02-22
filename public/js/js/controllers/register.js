@@ -1,0 +1,1 @@
+function RegisterController(e,t,r){this.user={},this.submit=function(){console.log("Submit"),e.signup(this.user,{url:"/api/register"}).then(function(e){r.$broadcast("loggedIn"),t.go("search")})}}angular.module("TravellyApp").controller("RegisterController",RegisterController),RegisterController.$inject=["$auth","$state","$rootScope"];

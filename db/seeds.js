@@ -1738,4 +1738,4 @@ User.create([
 ], function(err, users) {
   console.log(users);
   mongoose.connection.close();
-})
+});
