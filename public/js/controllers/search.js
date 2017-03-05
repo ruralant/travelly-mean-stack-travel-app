@@ -127,6 +127,5 @@ function SearchController(Flights, $http, $rootScope, $state) {
 }
 
 window.addEventListener('click', (e) => {
-  console.log(e.target);
   let holidaySelected = document.getSelection('themes["${e.target}"]');
 });
