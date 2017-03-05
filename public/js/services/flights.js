@@ -3,20 +3,20 @@ angular
   .service("Flights", Flights);
 
 Flights.$inject = ["$http"];
-Flights(($http) => {
+function Flights($http) {
 
-  padNum((num) => {
+  function padNum(num) {
     if(num < 10) return "0" + num;
     return num;
-  });
+  }
 
-  formatDate((date) => {
+  function formatDate(date) {
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
     let day = date.getDate();
 
     return year + "-" + padNum(month) + "-" + padNum(day);
-  });
+  }
 
   this.query = (budget, location, departureDate, returnDate, theme) => {
     return $http({
@@ -34,4 +34,4 @@ Flights(($http) => {
       return res.data;
     });
   };
-});
+}

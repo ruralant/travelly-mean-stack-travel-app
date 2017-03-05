@@ -3,7 +3,7 @@ angular
   .controller("RegisterController", RegisterController);
 
 RegisterController.$inject = ["$auth", "$state", "$rootScope"];
-RegisterController(($auth, $state, $rootScope) => {
+function RegisterController($auth, $state, $rootScope) {
 
   this.user = {};
 
@@ -17,4 +17,4 @@ RegisterController(($auth, $state, $rootScope) => {
       $state.go('search');
     });
   };
-});
+}

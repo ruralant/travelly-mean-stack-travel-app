@@ -3,7 +3,7 @@ angular
   .controller("LoginController", LoginController);
 
 LoginController.$inject = ["$auth", "$state", "$rootScope"];
-LoginController(($auth, $state, $rootScope) => {
+function LoginController($auth, $state, $rootScope) {
 
   this.credentials = {};
 
@@ -23,4 +23,4 @@ LoginController(($auth, $state, $rootScope) => {
       $state.go('search');
     });
   };
-});
+}

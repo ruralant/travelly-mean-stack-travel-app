@@ -3,6 +3,6 @@ angular
   .controller("UsersIndexController", UsersIndexController);
 
 UsersIndexController.$inject = ["User"];
-UsersIndexController((User) => {
+function UsersIndexController(User) {
   this.all = User.query();
-});
+}

@@ -1,1 +1,0 @@
-function date(){return{restrict:"A",require:"ngModel",link:function(e,t,r,n){n.$formatters.push(function(e){return new Date(e)})}}}angular.module("TravellyApp").directive("date",date);

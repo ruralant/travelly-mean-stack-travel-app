@@ -3,7 +3,7 @@ angular
   .controller("UsersEditController", UsersEditController);
 
 UsersEditController.$inject = ["User", "$state"];
-UsersEditController((User, $state) => {
+function UsersEditController(User, $state) {
   this.selected = User.get($state.params);
 
   this.save = () => {
@@ -11,4 +11,4 @@ UsersEditController((User, $state) => {
       $state.go("usersShow", $state.params);
     });
   };
-});
+}

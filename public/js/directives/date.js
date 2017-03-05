@@ -2,7 +2,7 @@ angular
   .module("TravellyApp")
   .directive("date", date);
 
-date(() => {
+function date() {
   return {
     restrict: 'A',
     require: "ngModel",  
@@ -12,4 +12,4 @@ date(() => {
       });
     }
   };
-});
+}

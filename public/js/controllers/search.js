@@ -3,7 +3,7 @@ angular
   .controller("SearchController", SearchController);
 
 SearchController.$inject = ["Flights", "$http", "$rootScope", "$state"];
-SearchController((Flights, $http, $rootScope, $state) => {
+function SearchController(Flights, $http, $rootScope, $state) {
   this.budget = null;
   this.location = null;
   this.departureDate = null;
@@ -124,8 +124,9 @@ SearchController((Flights, $http, $rootScope, $state) => {
       $state.go("results");
     });
   };
-});
+}
 
 window.addEventListener('click', (e) => {
-  const holidaySelected = document.querySelector('themes["${e.target}"]');
+  console.log(e.target);
+  let holidaySelected = document.getSelection('themes["${e.target}"]');
 });

@@ -2,7 +2,7 @@ angular
   .module("TravellyApp")
   .factory("formData", formData);
 
-formData(() => {
+function formData() {
   return {
     transform: (data) => {
       let formData = new FormData();
@@ -13,4 +13,4 @@ formData(() => {
       return formData;
     }
   };
-});
+}

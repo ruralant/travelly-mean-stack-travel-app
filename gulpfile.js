@@ -18,18 +18,15 @@ gulp.task('browserSync', () => {
   browserSync.init({
     server: {
       baseDir: 'public'
-    },
-    ui: {
-        port: 8000
-    },
+    }, ui: { port: 8000 },
   });
 });
 
-gulp.task('useref', () => {
-return gulp.src(['lib/**/app.js', 'lib/**/*.js'])
+gulp.task('useref', function() {
+return gulp.src('/public/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulp.dest('public/js'));
+    .pipe(gulp.dest('public'));
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function (){

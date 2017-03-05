@@ -2,7 +2,7 @@ angular
   .module("TravellyApp")
   .directive("places", places);
 
-places(() => {
+function places() {
   return {
     restrict: 'A',
     require: "ngModel",
@@ -15,4 +15,4 @@ places(() => {
       });
     }
   };
-});
+}

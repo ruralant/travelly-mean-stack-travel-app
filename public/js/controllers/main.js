@@ -3,7 +3,7 @@ angular
   .controller("MainController", MainController);
 
 MainController.$inject = ["$auth", "$state", "$rootScope", "User"];
-MainController(($auth, $state, $rootScope, User) => {
+function MainController($auth, $state, $rootScope, User) {
 
   let self = this;
   this.searchResults = [];
@@ -16,7 +16,7 @@ MainController(($auth, $state, $rootScope, User) => {
     $state.go("/");
   };
 
-  filterStoredUserSearch((searchResults) => {
+  function filterStoredUserSearch(searchResults) {
     let filteredSearchResults = [];
 
     searchResults.forEach((searchResult, index) => {
@@ -29,7 +29,7 @@ MainController(($auth, $state, $rootScope, User) => {
     });
 
     return filteredSearchResults;
-  });
+  }
 
   this.storeUserSearch = () => {
     this.filteredSearchResults = filterStoredUserSearch(this.searchResults);
@@ -60,4 +60,4 @@ MainController(($auth, $state, $rootScope, User) => {
       console.log("This are the similar users: ", users);
     });
   });
-});
+}

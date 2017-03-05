@@ -3,7 +3,7 @@ angular
   .controller("UsersShowController", UsersShowController);
 
 UsersShowController.$inject = ["User", "$state"];
-UsersShowController((User, $state) => {
+function UsersShowController(User, $state) {
   this.selected = User.get($state.params);
 
   this.delete = () => {
@@ -11,4 +11,4 @@ UsersShowController((User, $state) => {
       $state.go("landing");
     });
   };
-});
+}

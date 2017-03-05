@@ -2,7 +2,7 @@ angular
   .module("TravellyApp")
   .directive("file", file);
 
-file(() => {
+function file() {
   return {
     restrict: 'A',
     require: "ngModel",   
@@ -12,4 +12,4 @@ file(() => {
       });
     }
   };
-})
+}

@@ -1,1 +1,0 @@
-function places(){return{restrict:"A",require:"ngModel",link:function(e,a,l,t){var c=new google.maps.places.Autocomplete(a[0],{types:["geocode"]});c.addListener("place_changed",function(){var e=c.getPlace();t.$setViewValue(e.formatted_address)})}}}angular.module("TravellyApp").directive("places",places);

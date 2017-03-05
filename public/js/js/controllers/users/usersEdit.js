@@ -1,1 +1,0 @@
-function UsersEditController(e,t){this.selected=e.get(t.params),this.save=function(){this.selected.$update(function(){t.go("usersShow",t.params)})}}angular.module("TravellyApp").controller("UsersEditController",UsersEditController),UsersEditController.$inject=["User","$state"];

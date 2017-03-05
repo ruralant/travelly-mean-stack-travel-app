@@ -6,7 +6,7 @@ angular
 
 // Auth Social API Keys
 oAuthConfig.$inject = ["$authProvider"];
-oAuthConfig(($authProvider) => {
+function oAuthConfig($authProvider) {
   $authProvider.facebook({
     url: 'api/oauth/facebook',
     clientId: "329436664057921"
@@ -15,11 +15,11 @@ oAuthConfig(($authProvider) => {
     url: 'api/oauth/twitter',
     clientId: "y9CHIe4zAlRP36gfp1SXDBqbj"
   });
-});
+}
 
 // Rooting 
 Router.$inject = ["$stateProvider", "$urlRouterProvider"];
-Router(($stateProvider, $urlRouterProvider) => {
+function Router($stateProvider, $urlRouterProvider) {
   $stateProvider 
     .state('login', {
       url: '/login',
@@ -66,4 +66,4 @@ Router(($stateProvider, $urlRouterProvider) => {
     });
 
   $urlRouterProvider.otherwise("/landing-page"); 
-});
+}
