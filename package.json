@@ -22,7 +22,8 @@
     "request-promise": "^4.1.1",
     "s3": "^4.4.0",
     "underscore": "^1.8.3",
-    "uuid": "^2.0.2"
+    "uuid": "^2.0.2",
+    "snyk": "^1.30.1"
   },
   "devDependencies": {
     "browser-sync": "^2.18.6",
@@ -34,7 +35,9 @@
   },
   "scripts": {
     "start": "node app",
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -45,5 +48,6 @@
   "bugs": {
     "url": "https://github.com/tonio155/Travelly_WDI_Project_3/issues"
   },
-  "homepage": "https://github.com/tonio155/Travelly_WDI_Project_3#readme"
+  "homepage": "https://github.com/tonio155/Travelly_WDI_Project_3#readme",
+  "snyk": true
 }
