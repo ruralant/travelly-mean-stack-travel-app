@@ -3,12 +3,12 @@
     <div class="col-lg-6">
       <div id="search-form" class="form-group m-x-auto">
         <label>Your Budget</label>
-        <input type="number" ng-model="search.budget" class="form-control">
+        <input type="number" ng-model="search.budget" class="form-control" required>
       </div>
 
       <div class="form-group m-x-auto">
         <label>From which airport are you flight from?</label>
-        <select ng-model="search.location" class="form-control" ng-options="airport.iataCode as airport.name for airport in search.airports | orderBy:'name'">
+        <select ng-model="search.location" class="form-control" ng-options="airport.iataCode as airport.name for airport in search.airports | orderBy:'name'" required>
         </select>
       </div>
     </div>
@@ -16,12 +16,12 @@
       <div class="form-group m-x-auto"> 
         <label>Fly Out</label>
         <label>From</label>
-        <input type="date" value="departureDate" ng-model="search.departureDate" class="form-control">
+        <input type="date" value="departureDate" ng-model="search.departureDate" class="form-control" required>
       </div>
 
       <div class="form-group m-x-auto">
         <label>Fly Back</label>
-        <input type="date" value="return" ng-model="search.returnDate" class="form-control">
+        <input type="date" value="return" ng-model="search.returnDate" class="form-control" required>
       </div>
     </div>
 

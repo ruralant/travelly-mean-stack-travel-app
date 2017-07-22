@@ -2,8 +2,8 @@ angular
   .module("TravellyApp")
   .controller("SearchController", SearchController);
 
-SearchController.$inject = ["Flights", "$http", "$rootScope", "$state"];
-function SearchController(Flights, $http, $rootScope, $state) {
+SearchController.$inject = ["Flights", "$rootScope", "$state"];
+function SearchController(Flights, $rootScope, $state) {
   this.budget = null;
   this.location = null;
   this.departureDate = null;
