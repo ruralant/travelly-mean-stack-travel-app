@@ -4,7 +4,7 @@
 
 ![](https://s3-eu-west-1.amazonaws.com/travelly/screenshot.png) 
 
-##What is Travelly:
+## What is Travelly:
 
 **Travelly** is a single page page application created using AngularJS that allows users to search for travel destinations based on their interests.
 
@@ -82,12 +82,12 @@ In a later stage I also designed also the web version:
 
 
 
-##Recognised Bugs
+## Recognised Bugs
 
 There are a few sections that needs to be styled better, in particular the footer of the landing page. Moreover, the project needs some adjustments on the mobile version using more **media queries**. 
 
 ---
-##Future Developments
+## Future Developments
 
 **v1.1** (04/10/2016)
 Login Bugfix
@@ -103,7 +103,7 @@ Messaging system between users.
 
 
 ---
-###For run the app locally, follow the next steps:
+### For run the app locally, follow the next steps:
 
 - Clone the app from Github
 - Run "npm i" on the terminal to set up Express.
