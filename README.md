@@ -13,7 +13,7 @@ Differently from the most common flight-search websites, Travelly is providing t
 - budget
 - nearest airport
 - dates
-- a theme
+- a vacation theme
  
 
 #### Here you can see the live version: <https://travelly-app.herokuapp.com/>
