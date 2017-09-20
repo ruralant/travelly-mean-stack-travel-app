@@ -49,7 +49,7 @@ The all the technologies used are the following one:
 The user can login with a combination of **email/password** and **Facebook** and **Twitter**.
 For created the whole register/login system I used **Bcrypt** for the registration process by username, email and password and **Satellizer** for creating the login system using the **Facebook** and **Twitter API**.
 
---
+---
 
 For accomplice the project I also used the following tools:
 
@@ -68,7 +68,7 @@ For accomplice the project I also used the following tools:
 - **Heroku**: for deploy the website.
 
 
---
+---
 
 I designed the website using the "mobile first" method:
 
@@ -78,7 +78,7 @@ In a later stage I also designed also the web version:
 
 ![](https://s3-eu-west-1.amazonaws.com/travelly/Desktop+Mokeup.png)
 
---
+---
 
 
 
